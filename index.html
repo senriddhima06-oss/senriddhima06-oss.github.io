@@ -8,93 +8,90 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+      line-height: 1.7;
     }
 
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      background: #020617;
+    .hero {
+      padding: 100px 20px;
+      background-color: #ffffff;
     }
 
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 20px;
-      color: #94a3b8;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
+    .hero-container {
+      max-width: 1100px;
       margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 70px;
     }
 
-    h2 {
-      color: #38bdf8;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 10px;
+    .hero-image img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
     }
 
-    .card {
-      background: #020617;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
+    .hero-text h1 {
+      font-size: 52px;
+      margin-bottom: 12px;
+      color: #0f172a;
+    }
+
+    .hero-text .subtitle {
+      font-size: 19px;
+      color: #475569;
+      margin-bottom: 35px;
+    }
+
+    .hero-text p {
+      font-size: 17.5px;
+      max-width: 650px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin: auto;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Riddhima Sen</h1>
-  <p>Electrical Engineering • FPGA • Embedded Systems</p>
-</header>
+  <section class="hero">
+    <div class="hero-container">
 
-<section>
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      Electrical Engineering undergraduate at NIT Delhi and BS Electronic Systems
-      student at IIT Madras. Interested in FPGA-based SoC design, digital signal
-      processing, embedded systems, and photonic integrated circuits.
-    </p>
-  </div>
-</section>
+      <div class="hero-image">
+        <img src="images/profile.jpg" alt="Riddhima Sen">
+      </div>
 
-<section>
-  <h2>Projects</h2>
+      <div class="hero-text">
+        <h1>Riddhima Sen</h1>
+        <div class="subtitle">Engineer and Research-Oriented Designer</div>
 
-  <div class="card">
-    <h3>LMS-based Adaptive FIR Filter on FPGA</h3>
-    <p>Verilog-based hardware accelerator implemented on ZedBoard and PYNQ-Z2.</p>
-  </div>
+        <p>
+          Hello, I am an engineer who enjoys working at the boundary between ideas and realization.
+          I am drawn to problems that require careful thinking, experimentation, and iteration,
+          where understanding the system matters as much as building it. I see engineering as an
+          exploratory process, one that blends analytical reasoning with hands-on design and testing.
+          Whether working with signals, hardware, or complex systems, I value clarity, rigor, and
+          purpose in my work. I thrive in environments that encourage curiosity and deep investigation,
+          and I am motivated by the challenge of turning abstract concepts into reliable,
+          well-engineered systems.
+        </p>
+      </div>
 
-  <div class="card">
-    <h3>EEG Hybrid Wavelet–LMS Denoising</h3>
-    <p>Fixed-point Verilog implementation for real EEG signal preprocessing.</p>
-  </div>
-
-  <div class="card">
-    <h3>ESP32-CAM Embedded Vision Security System</h3>
-    <p>WiFi-based face recognition with lightweight embedded processing.</p>
-  </div>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <div class="card">
-    <p>Email: senriddhima06@gmail.com</p>
-    <p>GitHub: github.com/senriddhima06-oss</p>
-    <p>LinkedIn: linkedin.com/in/riddhima-sen</p>
-  </div>
-</section>
+    </div>
+  </section>
 
 </body>
 </html>
