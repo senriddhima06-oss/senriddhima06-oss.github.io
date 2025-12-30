@@ -15,11 +15,56 @@
     }
 
     .page {
-      max-width: 900px;
+      max-width: 950px;
       margin: 120px auto;
       padding: 0 24px;
     }
 
+    h1 {
+      font-size: 44px;
+      font-weight: normal;
+      margin-bottom: 30px;
+      color: #0f172a;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 50px;
+      color: #0f172a;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 0;
+      text-align: justify;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+      font-size: 17.5px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .divider {
+      margin: 100px auto;
+      width: 120px;
+      height: 1px;
+      background-color: #d1d5db;
+    }
+
+    /* INTRO */
     .intro {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -40,33 +85,7 @@
       filter: grayscale(10%);
     }
 
-    h1 {
-      font-size: 44px;
-      margin-bottom: 30px;
-      font-weight: normal;
-      color: #0f172a;
-    }
-
-    h2 {
-      font-size: 32px;
-      font-weight: normal;
-      margin-bottom: 40px;
-      color: #0f172a;
-    }
-
-    p {
-      font-size: 18px;
-      margin: 0;
-      text-align: justify;
-    }
-
-    .divider {
-      margin: 100px auto;
-      width: 120px;
-      height: 1px;
-      background-color: #d1d5db;
-    }
-
+    /* EDUCATION */
     .education-item {
       display: grid;
       grid-template-columns: 80px 1fr;
@@ -80,33 +99,32 @@
       object-fit: contain;
     }
 
-    .education-text h3 {
-      font-size: 22px;
-      font-weight: normal;
-      margin: 0 0 6px 0;
-      color: #0f172a;
-    }
-
-    .education-text p {
-      font-size: 17px;
-      text-align: left;
-    }
-
+    /* INTERESTS */
     .interests {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px 60px;
     }
 
-    .interest-item {
-      font-size: 18px;
+    /* PROJECTS */
+    .project {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 50px;
+      margin-bottom: 80px;
+      align-items: start;
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 6px;
     }
 
     @media (max-width: 900px) {
       .intro,
-      .education-item {
+      .education-item,
+      .project {
         grid-template-columns: 1fr;
-        text-align: center;
       }
 
       p {
@@ -121,88 +139,125 @@
 </head>
 
 <body>
+<div class="page">
 
-  <div class="page">
+  <!-- ABOUT -->
+  <section class="intro">
+    <div class="photo">
+      <img src="images/profile.jpg" alt="Riddhima Sen">
+    </div>
+    <div>
+      <h1>Riddhima Sen</h1>
+      <p>
+        Hello, I am an engineer who enjoys working at the boundary between ideas and realization.
+        I am drawn to problems that require careful thinking, experimentation, and iteration,
+        where understanding the system matters as much as building it. I see engineering as an
+        exploratory process, one that blends analytical reasoning with hands-on design and testing.
+        Whether working with signals, hardware, or complex systems, I value clarity, rigor, and
+        purpose in my work. I thrive in environments that encourage curiosity and deep investigation,
+        and I am motivated by the challenge of turning abstract concepts into reliable,
+        well-engineered systems.
+      </p>
+    </div>
+  </section>
 
-    <!-- ABOUT SECTION -->
-    <section class="intro">
-      <div class="photo">
-        <img src="images/profile.jpg" alt="Riddhima Sen">
-      </div>
+  <div class="divider"></div>
 
+  <!-- EDUCATION -->
+  <section>
+    <h2>Education</h2>
+
+    <div class="education-item">
+      <img src="images/nit_delhi.png">
       <div>
-        <h1>Riddhima Sen</h1>
-        <p>
-          Hello, I am an engineer who enjoys working at the boundary between ideas and realization.
-          I am drawn to problems that require careful thinking, experimentation, and iteration,
-          where understanding the system matters as much as building it. I see engineering as an
-          exploratory process, one that blends analytical reasoning with hands-on design and testing.
-          Whether working with signals, hardware, or complex systems, I value clarity, rigor, and
-          purpose in my work. I thrive in environments that encourage curiosity and deep investigation,
-          and I am motivated by the challenge of turning abstract concepts into reliable,
-          well-engineered systems.
-        </p>
+        <h3>National Institute of Technology Delhi</h3>
+        <p>B.Tech in Electrical Engineering<br>CGPA: 8.6 (till 4th Semester)<br>2023 – 2027</p>
       </div>
-    </section>
+    </div>
 
-    <div class="divider"></div>
-
-    <!-- EDUCATION SECTION -->
-    <section>
-      <h2>Education</h2>
-
-      <div class="education-item">
-        <img src="images/nit_delhi.png" alt="NIT Delhi">
-        <div class="education-text">
-          <h3>National Institute of Technology Delhi</h3>
-          <p>
-            Bachelor of Technology in Electrical Engineering<br>
-            CGPA: 8.6 (till 4th Semester)<br>
-            2023 – 2027
-          </p>
-        </div>
+    <div class="education-item">
+      <img src="images/iit_madras.png">
+      <div>
+        <h3>Indian Institute of Technology Madras</h3>
+        <p>B.Sc. in Electronic Systems (Hybrid)<br>CGPA: 8.53 (3rd Semester)<br>2024 – 2028</p>
       </div>
+    </div>
 
-      <div class="education-item">
-        <img src="images/iit_madras.png" alt="IIT Madras">
-        <div class="education-text">
-          <h3>Indian Institute of Technology Madras</h3>
-          <p>
-            Bachelor of Science in Electronic Systems (Hybrid)<br>
-            CGPA: 8.53 (3rd Semester)<br>
-            2024 – 2028
-          </p>
-        </div>
+    <div class="education-item">
+      <img src="images/gyan_bharati.png">
+      <div>
+        <h3>Gyan Bharati School, New Delhi</h3>
+        <p>Class XII: 95%<br>Class X: 96.7%</p>
       </div>
+    </div>
+  </section>
 
-      <div class="education-item">
-        <img src="images/gyan_bharati.png" alt="Gyan Bharati School">
-        <div class="education-text">
-          <h3>Gyan Bharati School, New Delhi</h3>
-          <p>
-            Class XII (CBSE): 95%<br>
-            Class X (CBSE): 96.7%
-          </p>
-        </div>
+  <div class="divider"></div>
+
+  <!-- INTERESTS -->
+  <section>
+    <h2>Interests</h2>
+    <div class="interests">
+      <div>VLSI and Digital IC Design</div>
+      <div>Quantum Technology and Photonic Integrated Circuits</div>
+      <div>Microbial Fuel Cells and Power Amplification Systems</div>
+      <div>Embedded Systems and Hardware–Software Co-design</div>
+      <div>Artificial Intelligence and Machine Learning</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <div>
+        <h3>High-Efficiency Bioelectric Energy Amplification using LC3108-Based DC–DC Boost Converter</h3>
+        <ul>
+          <li>Designed reactor arrangements to maximize power output from MFC cells; performed power amplification and efficiency characterization for bioelectric energy harvesting.</li>
+          <li>Implemented a DC–DC boost converter using the LC3108 IC to enhance voltage output from microbial sources.</li>
+        </ul>
       </div>
-    </section>
+      <img src="images/mfc.png">
+    </div>
 
-    <div class="divider"></div>
-
-    <!-- INTERESTS SECTION -->
-    <section>
-      <h2>Interests</h2>
-
-      <div class="interests">
-        <div class="interest-item">VLSI and Digital IC Design</div>
-        <div class="interest-item">Quantum Technology and Photonic Integrated Circuits</div>
-        <div class="interest-item">Microbial Fuel Cells and Power Amplification Systems</div>
-        <div class="interest-item">Embedded Systems and Hardware–Software Co-design</div>
-        <div class="interest-item">Artificial Intelligence and Machine Learning</div>
+    <div class="project">
+      <div>
+        <h3>EEG Preprocessing and Signal Extraction</h3>
+        <ul>
+          <li>Collected EEG data from the PhysioNet Motor Movement/Imagery dataset, extracted and visualized clean EEG segments using MNE, and generated fixed-point formatted data for hardware simulation.</li>
+          <li>Designed and simulated a Hybrid Wavelet–LMS Denoising System in Verilog using Haar DWT and LMS adaptive filter modules.</li>
+        </ul>
       </div>
-    </section>
+      <img src="images/eeg.png">
+    </div>
 
-  </div>
+    <div class="project">
+      <div>
+        <h3>Autonomous Fixed-Wing UAV: Airframe Design and ArduPilot Integration</h3>
+        <ul>
+          <li>Designed and built an autonomous RC aircraft featuring a custom airframe and integrated avionics suite.</li>
+          <li>Implemented autonomous navigation using Pixhawk and ArduPilot with telemetry and waypoint-based missions.</li>
+        </ul>
+      </div>
+      <img src="images/uav.png">
+    </div>
 
+    <div class="project">
+      <div>
+        <h3>Embedded Vision Security System with ESP32-CAM and Lightweight Face Recognition</h3>
+        <ul>
+          <li>Developed an IoT-enabled security system using ESP32-CAM for real-time video streaming over Wi-Fi.</li>
+          <li>Implemented onboard image capture with timestamps and lightweight face-recognition logic.</li>
+        </ul>
+      </div>
+      <img src="images/esp32.png">
+    </div>
+
+  </section>
+
+</div>
 </body>
 </html>
