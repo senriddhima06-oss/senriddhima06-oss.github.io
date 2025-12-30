@@ -40,35 +40,81 @@
       filter: grayscale(10%);
     }
 
-    .text h1 {
+    h1 {
       font-size: 44px;
       margin-bottom: 30px;
       font-weight: normal;
       color: #0f172a;
     }
 
-    .text p {
+    h2 {
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 40px;
+      color: #0f172a;
+    }
+
+    p {
       font-size: 18px;
       margin: 0;
       text-align: justify;
     }
 
     .divider {
-      margin: 100px auto 0;
+      margin: 100px auto;
       width: 120px;
       height: 1px;
       background-color: #d1d5db;
     }
 
+    .education-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 30px;
+      margin-bottom: 50px;
+      align-items: center;
+    }
+
+    .education-item img {
+      width: 70px;
+      object-fit: contain;
+    }
+
+    .education-text h3 {
+      font-size: 22px;
+      font-weight: normal;
+      margin: 0 0 6px 0;
+      color: #0f172a;
+    }
+
+    .education-text p {
+      font-size: 17px;
+      text-align: left;
+    }
+
+    .interests {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px 60px;
+    }
+
+    .interest-item {
+      font-size: 18px;
+    }
+
     @media (max-width: 900px) {
-      .intro {
+      .intro,
+      .education-item {
         grid-template-columns: 1fr;
-        gap: 60px;
         text-align: center;
       }
 
-      .text p {
+      p {
         text-align: left;
+      }
+
+      .interests {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -78,15 +124,14 @@
 
   <div class="page">
 
+    <!-- ABOUT SECTION -->
     <section class="intro">
-
       <div class="photo">
         <img src="images/profile.jpg" alt="Riddhima Sen">
       </div>
 
-      <div class="text">
+      <div>
         <h1>Riddhima Sen</h1>
-
         <p>
           Hello, I am an engineer who enjoys working at the boundary between ideas and realization.
           I am drawn to problems that require careful thinking, experimentation, and iteration,
@@ -98,10 +143,64 @@
           well-engineered systems.
         </p>
       </div>
-
     </section>
 
     <div class="divider"></div>
+
+    <!-- EDUCATION SECTION -->
+    <section>
+      <h2>Education</h2>
+
+      <div class="education-item">
+        <img src="images/nit_delhi.png" alt="NIT Delhi">
+        <div class="education-text">
+          <h3>National Institute of Technology Delhi</h3>
+          <p>
+            Bachelor of Technology in Electrical Engineering<br>
+            CGPA: 8.6 (till 4th Semester)<br>
+            2023 – 2027
+          </p>
+        </div>
+      </div>
+
+      <div class="education-item">
+        <img src="images/iit_madras.png" alt="IIT Madras">
+        <div class="education-text">
+          <h3>Indian Institute of Technology Madras</h3>
+          <p>
+            Bachelor of Science in Electronic Systems (Hybrid)<br>
+            CGPA: 8.53 (3rd Semester)<br>
+            2024 – 2028
+          </p>
+        </div>
+      </div>
+
+      <div class="education-item">
+        <img src="images/gyan_bharati.png" alt="Gyan Bharati School">
+        <div class="education-text">
+          <h3>Gyan Bharati School, New Delhi</h3>
+          <p>
+            Class XII (CBSE): 95%<br>
+            Class X (CBSE): 96.7%
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- INTERESTS SECTION -->
+    <section>
+      <h2>Interests</h2>
+
+      <div class="interests">
+        <div class="interest-item">VLSI and Digital IC Design</div>
+        <div class="interest-item">Quantum Technology and Photonic Integrated Circuits</div>
+        <div class="interest-item">Microbial Fuel Cells and Power Amplification Systems</div>
+        <div class="interest-item">Embedded Systems and Hardware–Software Co-design</div>
+        <div class="interest-item">Artificial Intelligence and Machine Learning</div>
+      </div>
+    </section>
 
   </div>
 
