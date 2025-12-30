@@ -81,6 +81,7 @@
       height: 260px;
       object-fit: cover;
       border-radius: 50%;
+      filter: grayscale(10%);
     }
 
     .experience,
@@ -104,6 +105,10 @@
       .project {
         grid-template-columns: 1fr;
       }
+
+      p {
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -114,12 +119,19 @@
 <!-- ABOUT -->
 <section class="intro">
   <div class="photo">
-    <img src="images/profile.jpg">
+    <img src="images/profile.jpg" alt="Riddhima Sen">
   </div>
   <div>
     <h1>Riddhima Sen</h1>
     <p>
-      Hello, I am an engineer who enjoys working at the boundary between ideas and realization...
+      Hello, I am an engineer who enjoys working at the boundary between ideas and realization.
+      I am drawn to problems that require careful thinking, experimentation, and iteration,
+      where understanding the system matters as much as building it. I see engineering as an
+      exploratory process, one that blends analytical reasoning with hands-on design and testing.
+      Whether working with signals, hardware, or complex systems, I value clarity, rigor, and
+      purpose in my work. I thrive in environments that encourage curiosity and deep investigation,
+      and I am motivated by the challenge of turning abstract concepts into reliable,
+      well-engineered systems.
     </p>
   </div>
 </section>
@@ -128,58 +140,132 @@
 
 <!-- PROFESSIONAL EXPERIENCE -->
 <section>
-<h2>Professional Experience</h2>
+  <h2>Professional Experience</h2>
 
-<div class="experience">
-  <div>
-    <h3>IIT Hyderabad – Summer Research Intern (SURE)</h3>
-    <ul>
-      <li>Designed and synthesized a hardware accelerator implementing the LMS optimization algorithm on FPGA platforms.</li>
-      <li>Applied LMS-based optimization for real-time signal enhancement in FIR filters.</li>
-      <li>Performed hardware–software co-design using PYNQ.</li>
-    </ul>
+  <div class="experience">
+    <div>
+      <h3>IIT Hyderabad – Summer Research Intern (SURE)</h3>
+      <ul>
+        <li>Designed and synthesized a hardware accelerator implementing the LMS optimization algorithm on FPGA platforms using Verilog and AXI protocols.</li>
+        <li>Applied LMS-based optimization for real-time signal enhancement in a 10-tap FIR filter.</li>
+        <li>Conducted hardware–software co-design and validation using PYNQ for real-time testing.</li>
+      </ul>
+      <div class="links">
+        <a href="assets/SURE_IITH_Report.pdf" target="_blank">View Research Report (PDF)</a>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="experience">
-  <div>
-    <h3>Startup – Electronics R&D Team Member</h3>
-    <ul>
-      <li>Designed an SOI-based photonic integrated circuit for quantum random number generation.</li>
-      <li>Implemented MMIs, VOAs, grating couplers, and waveguide routing.</li>
-      <li>Developed fabrication-ready layouts using gdsfactory and KLayout.</li>
-    </ul>
+  <div class="experience">
+    <div>
+      <h3>Startup – Electronics R&D Team Member</h3>
+      <ul>
+        <li>Worked on the design and development of a silicon-on-insulator based photonic integrated circuit for quantum random number generation using vacuum-state homodyne detection.</li>
+        <li>Designed key photonic components including multimode interferometers, variable optical attenuators, grating couplers, and waveguide routing structures.</li>
+        <li>Translated published research concepts into fabrication-ready photonic layouts through modular and hierarchical design methodologies.</li>
+        <li>Developed reusable and well-organized GDS layouts using gdsfactory and KLayout with proper layer management and cell reuse.</li>
+        <li>Focused on layout correctness, scalability, and alignment with fabrication constraints for integrated photonic systems.</li>
+      </ul>
+    </div>
+    <img src="images/startup.png" alt="Photonic IC Layout">
   </div>
-  <img src="images/startup_pic.png">
-</div>
 
-<div class="experience">
-  <div>
-    <h3>Chip Web Technologies Pvt. Ltd. – Winter Intern</h3>
-    <ul>
-      <li>Worked on Verilog-based FSM design and FPGA IP testing.</li>
-      <li>Simulated and verified sequential digital systems.</li>
-    </ul>
+  <div class="experience">
+    <div>
+      <h3>Chip Web Technologies Pvt. Ltd. – Winter Intern</h3>
+      <ul>
+        <li>Gained practical experience in Verilog, finite state machines, and FPGA IP module testing.</li>
+        <li>Simulated and verified sequential digital systems using industry-standard tools.</li>
+      </ul>
+    </div>
   </div>
-</div>
 </section>
 
 <div class="divider"></div>
 
 <!-- PROJECTS -->
 <section>
-<h2>Projects</h2>
+  <h2>Projects</h2>
 
-<div class="project">
-  <div>
-    <h3>Student Database Management System using Python & MySQL</h3>
-    <ul>
-      <li>Designed a role-based student database system enabling teachers and students to securely manage academic records.</li>
-      <li>Implemented Python–MySQL integration for CRUD operations, sorting, and structured performance analysis.</li>
-      <li>Developed modular backend logic to handle large datasets efficiently while reducing manual data handling.</li>
-    </ul>
+  <div class="project">
+    <div>
+      <h3>High-Efficiency Bioelectric Energy Amplification using LC3108-Based DC–DC Boost Converter</h3>
+      <ul>
+        <li>Designed reactor arrangements to maximize power output from MFC cells; performed power amplification and efficiency characterization for bioelectric energy harvesting.</li>
+        <li>Implemented a DC–DC boost converter using the LC3108 IC to enhance voltage output from microbial sources.</li>
+      </ul>
+    </div>
+    <img src="images/mfc.png">
   </div>
-</div>
+
+  <div class="project">
+    <div>
+      <h3>EEG Preprocessing and Signal Extraction</h3>
+      <ul>
+        <li>Collected EEG data from the PhysioNet Motor Movement dataset and generated fixed-point formatted data for hardware simulation.</li>
+        <li>Designed and simulated a Hybrid Wavelet–LMS Denoising System in Verilog using Haar DWT and LMS adaptive filtering.</li>
+      </ul>
+    </div>
+    <img src="images/eeg.png">
+  </div>
+
+  <div class="project">
+    <div>
+      <h3>Autonomous Fixed-Wing UAV: Airframe Design and ArduPilot Integration</h3>
+      <ul>
+        <li>Designed and built an autonomous RC aircraft with a custom airframe and integrated avionics.</li>
+        <li>Implemented autonomous navigation using Pixhawk and ArduPilot with telemetry and waypoint-based missions.</li>
+      </ul>
+    </div>
+    <img src="images/uav.png">
+  </div>
+
+  <div class="project">
+    <div>
+      <h3>Embedded Vision Security System with ESP32-CAM and Lightweight Face Recognition</h3>
+      <ul>
+        <li>Developed an IoT-enabled security system using ESP32-CAM for real-time video streaming.</li>
+        <li>Implemented onboard image capture with timestamps and lightweight face-recognition logic.</li>
+      </ul>
+    </div>
+    <img src="images/esp32.png">
+  </div>
+
+  <div class="project">
+    <div>
+      <h3>Detection and Analysis of Interplanetary Coronal Mass Ejections Using Python</h3>
+      <ul>
+        <li>Developed a Python-based pipeline to analyze solar wind and interplanetary magnetic field data for identifying ICME events.</li>
+        <li>Processed and visualized time-series space weather data using scientific computing libraries.</li>
+        <li>Extracted key signal features relevant to ICME detection.</li>
+      </ul>
+    </div>
+    <img src="images/icme.png">
+  </div>
+
+  <div class="project">
+    <div>
+      <h3>Bluetooth-Controlled Arduino-Based Mobile Robotic Platform</h3>
+      <ul>
+        <li>Designed and built a Bluetooth-controlled robotic vehicle using Arduino.</li>
+        <li>Implemented wireless control logic for real-time navigation.</li>
+        <li>Integrated motor drivers and power management.</li>
+      </ul>
+    </div>
+    <img src="images/bluetooth_car.png">
+  </div>
+
+  <!-- NEW PROJECT ADDED -->
+  <div class="project">
+    <div>
+      <h3>Scalable Student Database Management System using Python and MySQL</h3>
+      <ul>
+        <li>Designed a role-based student database system enabling teachers and students to manage academic records efficiently.</li>
+        <li>Implemented Python–MySQL integration for secure insertion, update, sorting, and deletion of records.</li>
+        <li>Developed a modular backend architecture capable of handling large datasets while reducing manual workload.</li>
+      </ul>
+    </div>
+  </div>
 
 </section>
 
@@ -187,43 +273,44 @@
 
 <!-- SKILLS -->
 <section>
-<h2>Skills</h2>
-<ul>
-  <li><b>Programming:</b> Verilog, Python, C, C++, Linux, MySQL, LaTeX</li>
-  <li><b>Tools:</b> Vivado, Vitis, Cadence, MATLAB, LTspice, ArduPilot, PowerBI, Proteus</li>
-  <li><b>Additional Coursework:</b> Digital IC Design, CMOS VLSI, Computer Architecture, Photonic ICs</li>
-</ul>
+  <h2>Skills</h2>
+  <ul>
+    <li><b>Programming:</b> Verilog, Python, C, C++, Linux, MySQL, LaTeX</li>
+    <li><b>Tools:</b> Vivado, Vitis, Cadence, MATLAB, LTspice, ArduPilot, PowerBI, Proteus</li>
+    <li><b>Languages:</b> English, Hindi, Bengali, Sanskrit, German (Learning)</li>
+    <li><b>Additional Coursework:</b> Digital IC Design, CMOS VLSI Design, Computer Architecture and Organization, Photonic Integrated Circuits</li>
+  </ul>
 </section>
 
 <div class="divider"></div>
 
 <!-- POSITIONS OF RESPONSIBILITY -->
 <section>
-<h2>Positions of Responsibility</h2>
+  <h2>Positions of Responsibility</h2>
 
-<div class="experience">
-  <div>
-    <h3>Training & Placement Cell – Sector Head</h3>
-    <p>Coordinated core placement activities and industry engagement initiatives.</p>
+  <div class="experience">
+    <div>
+      <h3>Training and Placement Cell Coordinator – Sector Head</h3>
+      <p>Coordinated core placement activities and facilitated interaction between students and recruiters.</p>
+    </div>
+    <img src="images/tpc.png">
   </div>
-  <img src="images/tpc.png">
-</div>
 
-<div class="experience">
-  <div>
-    <h3>Team TIVRA – Core Member</h3>
-    <p>Worked on accumulator design and BMS integration for electric race car.</p>
+  <div class="experience">
+    <div>
+      <h3>Team TIVRA – Core Member (Accumulator Team)</h3>
+      <p>Worked on BMS system design and powertrain integration for electric race car development.</p>
+    </div>
+    <img src="images/tivra.png">
   </div>
-  <img src="images/tivra.png">
-</div>
 
-<div class="experience">
-  <div>
-    <h3>Google Developer Student Club – Executive Member</h3>
-    <p>Organized hackathons and technical workshops.</p>
+  <div class="experience">
+    <div>
+      <h3>Google Developer Student Club – Executive Member</h3>
+      <p>Organized hackathons and technical workshops to promote peer learning.</p>
+    </div>
+    <img src="images/gdsc.png">
   </div>
-  <img src="images/gdsc.png">
-</div>
 
 </section>
 
@@ -231,24 +318,25 @@
 
 <!-- PUBLICATION -->
 <section>
-<h2>Publication</h2>
-<p>
-Khemraj et al., <i>“Substrate Optimization in Constructed Wetland–Microbial Fuel Cells”</i>,  
-Springer (Under Review), 2025.
-</p>
+  <h2>Publication</h2>
+  <p>
+    Khemraj, Neha Pandey, Gurudatta Singh, <b>Riddhima Sen</b>, Asheesh Kumar Yadav, Kapil Kumar.  
+    <i>“Substrate Optimization in Constructed Wetland–Microbial Fuel Cells: Global Trends, Performance Meta-Analysis, and Feasibility Mapping.”</i>  
+    Springer (Under Review), 2025.
+  </p>
 </section>
 
 <div class="divider"></div>
 
 <!-- ACHIEVEMENTS & INTERESTS -->
 <section>
-<h2>Achievements & Interests</h2>
-<ul>
-  <li>Ranked in Top 2 percentile in B.Tech EE (NIT Delhi).</li>
-  <li>Technoxian 2024 World Robotics Championship – Finalist.</li>
-  <li>Designed TREEBOOK platform enabling donation of 150+ books.</li>
-  <li>Violin (A2 Level with Distinction) – Trinity College London.</li>
-</ul>
+  <h2>Achievements & Interests</h2>
+  <ul>
+    <li>Ranked in the Top 2 percentile in B.Tech Electrical Engineering at NIT Delhi.</li>
+    <li>Finalist at Technoxian 2024 – World Robotics Championship (RC Aircraft).</li>
+    <li>Designed TREEBOOK platform enabling donation and redistribution of 150+ books.</li>
+    <li>Violin (A2 Level with Distinction) – Trinity College London.</li>
+  </ul>
 </section>
 
 </div>
