@@ -37,7 +37,7 @@
     h3 {
       font-size: 24px;
       font-weight: normal;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       color: #0f172a;
     }
 
@@ -64,7 +64,6 @@
       background-color: #d1d5db;
     }
 
-    /* INTRO */
     .intro {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -85,28 +84,7 @@
       filter: grayscale(10%);
     }
 
-    /* EDUCATION */
-    .education-item {
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 30px;
-      margin-bottom: 50px;
-      align-items: center;
-    }
-
-    .education-item img {
-      width: 70px;
-      object-fit: contain;
-    }
-
-    /* INTERESTS */
-    .interests {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px 60px;
-    }
-
-    /* PROJECTS */
+    .experience,
     .project {
       display: grid;
       grid-template-columns: 1.3fr 1fr;
@@ -115,24 +93,33 @@
       align-items: start;
     }
 
+    .experience img,
     .project img {
       width: 100%;
       border-radius: 6px;
     }
 
+    .links a {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 900px) {
       .intro,
-      .education-item,
+      .experience,
       .project {
         grid-template-columns: 1fr;
       }
 
       p {
         text-align: left;
-      }
-
-      .interests {
-        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -163,54 +150,53 @@
 
   <div class="divider"></div>
 
-  <!-- EDUCATION -->
+  <!-- PROFESSIONAL EXPERIENCE -->
   <section>
-    <h2>Education</h2>
+    <h2>Professional Experience</h2>
 
-    <div class="education-item">
-      <img src="images/nit_delhi.png">
+    <div class="experience">
       <div>
-        <h3>National Institute of Technology Delhi</h3>
-        <p>B.Tech in Electrical Engineering<br>CGPA: 8.6 (till 4th Semester)<br>2023 – 2027</p>
+        <h3>IIT Hyderabad – Summer Research Intern (SURE)</h3>
+        <ul>
+          <li>Designed and synthesized a hardware accelerator implementing the LMS optimization algorithm on FPGA platforms using Verilog and AXI protocols.</li>
+          <li>Applied LMS-based optimization for real-time signal enhancement in a 10-tap FIR filter.</li>
+          <li>Conducted hardware–software co-design and validation using PYNQ for real-time testing.</li>
+        </ul>
+        <div class="links">
+          <a href="assets/SURE_IITH_Report.pdf" target="_blank">View Research Report (PDF)</a>
+        </div>
+      </div>
+      <img src="images/sure_iith.png" alt="IIT Hyderabad Research">
+    </div>
+
+    <div class="experience">
+      <div>
+        <h3>Startup – Electronics R&D Team Member</h3>
+        <ul>
+          <li>Designed an integrated photonic chip for quantum random number generation based on vacuum-state homodyne detection on an SOI platform.</li>
+          <li>Developed hierarchical photonic layouts using gdsfactory and KLayout for fabrication-ready GDS designs.</li>
+        </ul>
       </div>
     </div>
 
-    <div class="education-item">
-      <img src="images/iit_madras.png">
+    <div class="experience">
       <div>
-        <h3>Indian Institute of Technology Madras</h3>
-        <p>B.Sc. in Electronic Systems (Hybrid)<br>CGPA: 8.53 (3rd Semester)<br>2024 – 2028</p>
-      </div>
-    </div>
-
-    <div class="education-item">
-      <img src="images/gyan_bharati.png">
-      <div>
-        <h3>Gyan Bharati School, New Delhi</h3>
-        <p>Class XII: 95%<br>Class X: 96.7%</p>
+        <h3>Chip Web Technologies Pvt. Ltd. – Winter Intern</h3>
+        <ul>
+          <li>Gained practical experience in Verilog, finite state machines, and FPGA IP module testing.</li>
+          <li>Simulated and verified sequential digital systems using industry-standard tools.</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- INTERESTS -->
-  <section>
-    <h2>Interests</h2>
-    <div class="interests">
-      <div>VLSI and Digital IC Design</div>
-      <div>Quantum Technology and Photonic Integrated Circuits</div>
-      <div>Microbial Fuel Cells and Power Amplification Systems</div>
-      <div>Embedded Systems and Hardware–Software Co-design</div>
-      <div>Artificial Intelligence and Machine Learning</div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- PROJECTS -->
+  <!-- PROJECTS (ALL PREVIOUS + NEW) -->
   <section>
     <h2>Projects</h2>
+
+    <!-- EXISTING PROJECTS (UNCHANGED) -->
 
     <div class="project">
       <div>
@@ -227,8 +213,8 @@
       <div>
         <h3>EEG Preprocessing and Signal Extraction</h3>
         <ul>
-          <li>Collected EEG data from the PhysioNet Motor Movement/Imagery dataset, extracted and visualized clean EEG segments using MNE, and generated fixed-point formatted data for hardware simulation.</li>
-          <li>Designed and simulated a Hybrid Wavelet–LMS Denoising System in Verilog using Haar DWT and LMS adaptive filter modules.</li>
+          <li>Collected EEG data from the PhysioNet Motor Movement dataset and generated fixed-point formatted data for hardware simulation.</li>
+          <li>Designed and simulated a Hybrid Wavelet–LMS Denoising System in Verilog using Haar DWT and LMS adaptive filtering.</li>
         </ul>
       </div>
       <img src="images/eeg.png">
@@ -238,7 +224,7 @@
       <div>
         <h3>Autonomous Fixed-Wing UAV: Airframe Design and ArduPilot Integration</h3>
         <ul>
-          <li>Designed and built an autonomous RC aircraft featuring a custom airframe and integrated avionics suite.</li>
+          <li>Designed and built an autonomous RC aircraft with a custom airframe and integrated avionics.</li>
           <li>Implemented autonomous navigation using Pixhawk and ArduPilot with telemetry and waypoint-based missions.</li>
         </ul>
       </div>
@@ -249,11 +235,37 @@
       <div>
         <h3>Embedded Vision Security System with ESP32-CAM and Lightweight Face Recognition</h3>
         <ul>
-          <li>Developed an IoT-enabled security system using ESP32-CAM for real-time video streaming over Wi-Fi.</li>
+          <li>Developed an IoT-enabled security system using ESP32-CAM for real-time video streaming.</li>
           <li>Implemented onboard image capture with timestamps and lightweight face-recognition logic.</li>
         </ul>
       </div>
       <img src="images/esp32.png">
+    </div>
+
+    <!-- NEW PROJECTS (ADDED) -->
+
+    <div class="project">
+      <div>
+        <h3>Detection and Analysis of Interplanetary Coronal Mass Ejections Using Python</h3>
+        <ul>
+          <li>Developed a Python-based pipeline to analyze solar wind and interplanetary magnetic field data for identifying ICME events.</li>
+          <li>Processed and visualized time-series space weather data using scientific computing libraries.</li>
+          <li>Extracted key signal features relevant to ICME detection for further data-driven analysis.</li>
+        </ul>
+      </div>
+      <img src="images/icme.png">
+    </div>
+
+    <div class="project">
+      <div>
+        <h3>Bluetooth-Controlled Arduino-Based Mobile Robotic Platform</h3>
+        <ul>
+          <li>Designed and built a Bluetooth-controlled robotic vehicle using Arduino.</li>
+          <li>Implemented wireless control logic for real-time navigation via a smartphone interface.</li>
+          <li>Integrated motor drivers and power management for reliable embedded operation.</li>
+        </ul>
+      </div>
+      <img src="images/bluetooth_car.png">
     </div>
 
   </section>
