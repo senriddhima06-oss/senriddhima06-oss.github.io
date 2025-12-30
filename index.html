@@ -8,16 +8,16 @@
   <style>
     body {
       margin: 0;
-      background-color: #fafafa;
+      background-color: #f6f7f9;
       color: #1f2937;
       font-family: "Times New Roman", Times, serif;
-      line-height: 1.8;
+      line-height: 1.85;
     }
 
     .page {
-      max-width: 950px;
-      margin: 120px auto;
-      padding: 0 24px;
+      max-width: 980px;
+      margin: 110px auto;
+      padding: 0 26px;
     }
 
     h1 {
@@ -30,14 +30,16 @@
     h2 {
       font-size: 32px;
       font-weight: normal;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
       color: #0f172a;
+      border-left: 4px solid #475569;
+      padding-left: 14px;
     }
 
     h3 {
       font-size: 24px;
       font-weight: normal;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
       color: #0f172a;
     }
 
@@ -58,15 +60,24 @@
     }
 
     .divider {
-      margin: 100px auto;
-      width: 120px;
+      margin: 110px auto;
+      width: 130px;
       height: 1px;
       background-color: #d1d5db;
     }
 
+    /* Card / panel look */
+    .panel {
+      background: #ffffff;
+      padding: 38px;
+      border-radius: 12px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+      margin-bottom: 80px;
+    }
+
     .intro {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
+      grid-template-columns: 1fr 1.25fr;
       gap: 80px;
       align-items: center;
     }
@@ -85,24 +96,50 @@
     }
 
     .experience,
-    .project {
+    .project,
+    .education {
       display: grid;
-      grid-template-columns: 1.3fr 1fr;
+      grid-template-columns: 1.35fr 1fr;
       gap: 50px;
-      margin-bottom: 80px;
       align-items: start;
     }
 
     .experience img,
     .project img {
       width: 100%;
-      border-radius: 6px;
+      border-radius: 8px;
+    }
+
+    /* Education header with logo */
+    .edu-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 8px;
+    }
+
+    .edu-header img {
+      width: 52px;
+      height: auto;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 16px;
+      color: #475569;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 900px) {
       .intro,
       .experience,
-      .project {
+      .project,
+      .education {
         grid-template-columns: 1fr;
       }
 
@@ -119,14 +156,19 @@
 <!-- ABOUT -->
 <section class="intro panel">
   <div class="photo">
-    <img src="images/profile.jpg">
+    <img src="images/profile.jpg" alt="Riddhima Sen">
   </div>
   <div>
     <h1>Riddhima Sen</h1>
     <p>
       Hello, I am an engineer who enjoys working at the boundary between ideas and realization.
       I am drawn to problems that require careful thinking, experimentation, and iteration,
-      where understanding the system matters as much as building it.
+      where understanding the system matters as much as building it. I see engineering as an
+      exploratory process, one that blends analytical reasoning with hands-on design and testing.
+      Whether working with signals, hardware, or complex systems, I value clarity, rigor, and
+      purpose in my work. I thrive in environments that encourage curiosity and deep investigation,
+      and I am motivated by the challenge of turning abstract concepts into reliable,
+      well-engineered systems.
     </p>
   </div>
 </section>
@@ -139,7 +181,10 @@
 
   <div class="education panel">
     <div>
-      <h3>National Institute of Technology Delhi</h3>
+      <div class="edu-header">
+        <img src="images/nit_delhi.png">
+        <h3>National Institute of Technology Delhi</h3>
+      </div>
       <p><b>Bachelor of Technology in Electrical Engineering</b> (2023–2027)</p>
       <p>CGPA: 8.6 (till 4th Semester)</p>
       <ul>
@@ -148,12 +193,14 @@
         <li>IoT, Microprocessors and Controllers</li>
       </ul>
     </div>
-    <img src="images/nit_delhi.png" alt="NIT Delhi Logo">
   </div>
 
   <div class="education panel">
     <div>
-      <h3>Indian Institute of Technology Madras (Hybrid)</h3>
+      <div class="edu-header">
+        <img src="images/iitm.png">
+        <h3>Indian Institute of Technology Madras (Hybrid)</h3>
+      </div>
       <p><b>Bachelor of Science in Electronic Systems</b> (2024–2028)</p>
       <p>CGPA: 8.53 (3rd Semester)</p>
       <ul>
@@ -162,17 +209,17 @@
         <li>Python and Digital Signal Processing</li>
       </ul>
     </div>
-    <img src="images/iitm.png" alt="IIT Madras Logo">
   </div>
 
   <div class="education panel">
     <div>
-      <h3>Gyan Bharati School, New Delhi</h3>
+      <div class="edu-header">
+        <img src="images/gyan_bharati.png">
+        <h3>Gyan Bharati School, New Delhi</h3>
+      </div>
       <p>Class XII (CBSE): 95% &nbsp;|&nbsp; Class X (CBSE): 96.7%</p>
     </div>
-    <img src="images/gyan_bharati.png" alt="School Logo">
   </div>
-
 </section>
 
 <div class="divider"></div>
@@ -181,7 +228,7 @@
 <section>
   <h2>Professional Experience</h2>
 
-  <div class="experience">
+  <div class="experience panel">
     <div>
       <h3>IIT Hyderabad – Summer Research Intern (SURE)</h3>
       <ul>
@@ -193,30 +240,19 @@
         <a href="assets/SURE_IITH_Report.pdf" target="_blank">View Research Report (PDF)</a>
       </div>
     </div>
+    <img src="images/iith.png">
   </div>
 
-  <div class="experience">
+  <div class="experience panel">
     <div>
       <h3>Startup – Electronics R&D Team Member</h3>
       <ul>
-        <li>Worked on the design and development of a silicon-on-insulator based photonic integrated circuit for quantum random number generation using vacuum-state homodyne detection.</li>
-        <li>Designed key photonic components including multimode interferometers, variable optical attenuators, grating couplers, and waveguide routing structures.</li>
-        <li>Translated published research concepts into fabrication-ready photonic layouts through modular and hierarchical design methodologies.</li>
-        <li>Developed reusable and well-organized GDS layouts using gdsfactory and KLayout with proper layer management and cell reuse.</li>
-        <li>Focused on layout correctness, scalability, and alignment with fabrication constraints for integrated photonic systems.</li>
+        <li>Worked on the design and development of a silicon-on-insulator based photonic integrated circuit for quantum random number generation.</li>
+        <li>Designed key photonic components including MMIs, VOAs, grating couplers, and waveguide routing.</li>
+        <li>Developed fabrication-ready layouts using gdsfactory and KLayout.</li>
       </ul>
     </div>
-    <img src="images/startup.png" alt="Photonic IC Layout">
-  </div>
-
-  <div class="experience">
-    <div>
-      <h3>Chip Web Technologies Pvt. Ltd. – Winter Intern</h3>
-      <ul>
-        <li>Gained practical experience in Verilog, finite state machines, and FPGA IP module testing.</li>
-        <li>Simulated and verified sequential digital systems using industry-standard tools.</li>
-      </ul>
-    </div>
+    <img src="images/startup.png">
   </div>
 </section>
 
@@ -226,153 +262,44 @@
 <section>
   <h2>Projects</h2>
 
-  <div class="project">
-    <div>
-      <h3>High-Efficiency Bioelectric Energy Amplification using LC3108-Based DC–DC Boost Converter</h3>
-      <ul>
-        <li>Designed reactor arrangements to maximize power output from MFC cells; performed power amplification and efficiency characterization for bioelectric energy harvesting.</li>
-        <li>Implemented a DC–DC boost converter using the LC3108 IC to enhance voltage output from microbial sources.</li>
-      </ul>
-    </div>
-    <img src="images/mfc.png">
-  </div>
-
-  <div class="project">
-    <div>
-      <h3>EEG Preprocessing and Signal Extraction</h3>
-      <ul>
-        <li>Collected EEG data from the PhysioNet Motor Movement dataset and generated fixed-point formatted data for hardware simulation.</li>
-        <li>Designed and simulated a Hybrid Wavelet–LMS Denoising System in Verilog using Haar DWT and LMS adaptive filtering.</li>
-      </ul>
-    </div>
-    <img src="images/eeg.png">
-  </div>
-
-  <div class="project">
+  <div class="project panel">
     <div>
       <h3>Autonomous Fixed-Wing UAV: Airframe Design and ArduPilot Integration</h3>
       <ul>
-        <li>Designed and built an autonomous RC aircraft with a custom airframe and integrated avionics.</li>
-        <li>Implemented autonomous navigation using Pixhawk and ArduPilot with telemetry and waypoint-based missions.</li>
+        <li>Designed and built an autonomous RC aircraft with a custom airframe.</li>
+        <li>Implemented autonomous navigation using Pixhawk and ArduPilot.</li>
       </ul>
+      <div class="links">
+        <a href="https://www.youtube.com/" target="_blank">Watch Flight Demonstration Video</a>
+      </div>
     </div>
     <img src="images/uav.png">
   </div>
 
-  <div class="project">
-    <div>
-      <h3>Embedded Vision Security System with ESP32-CAM and Lightweight Face Recognition</h3>
-      <ul>
-        <li>Developed an IoT-enabled security system using ESP32-CAM for real-time video streaming.</li>
-        <li>Implemented onboard image capture with timestamps and lightweight face-recognition logic.</li>
-      </ul>
-    </div>
-    <img src="images/esp32.png">
-  </div>
-
-  <div class="project">
-    <div>
-      <h3>Detection and Analysis of Interplanetary Coronal Mass Ejections Using Python</h3>
-      <ul>
-        <li>Developed a Python-based pipeline to analyze solar wind and interplanetary magnetic field data for identifying ICME events.</li>
-        <li>Processed and visualized time-series space weather data using scientific computing libraries.</li>
-        <li>Extracted key signal features relevant to ICME detection.</li>
-      </ul>
-    </div>
-    <img src="images/icme.png">
-  </div>
-
-  <div class="project">
-    <div>
-      <h3>Bluetooth-Controlled Arduino-Based Mobile Robotic Platform</h3>
-      <ul>
-        <li>Designed and built a Bluetooth-controlled robotic vehicle using Arduino.</li>
-        <li>Implemented wireless control logic for real-time navigation.</li>
-        <li>Integrated motor drivers and power management.</li>
-      </ul>
-    </div>
-    <img src="images/bluetooth_car.png">
-  </div>
-
-  <!-- NEW PROJECT ADDED -->
-  <div class="project">
+  <div class="project panel">
     <div>
       <h3>Scalable Student Database Management System using Python and MySQL</h3>
       <ul>
-        <li>Designed a role-based student database system enabling teachers and students to manage academic records efficiently.</li>
-        <li>Implemented Python–MySQL integration for secure insertion, update, sorting, and deletion of records.</li>
-        <li>Developed a modular backend architecture capable of handling large datasets while reducing manual workload.</li>
+        <li>Designed a role-based student database system for teachers and students.</li>
+        <li>Implemented Python–MySQL integration for secure CRUD operations.</li>
+        <li>Optimized backend logic for large datasets.</li>
       </ul>
+      <div class="links">
+        <a href="assets/Student_DBMS_Report.pdf" target="_blank">View Project Report (PDF)</a>
+      </div>
     </div>
+    <img src="images/student_dbms.png">
   </div>
-
-</section>
-
-<div class="divider"></div>
-
-<!-- SKILLS -->
-<section>
-  <h2>Skills</h2>
-  <ul>
-    <li><b>Programming:</b> Verilog, Python, C, C++, Linux, MySQL, LaTeX</li>
-    <li><b>Tools:</b> Vivado, Vitis, Cadence, MATLAB, LTspice, ArduPilot, PowerBI, Proteus</li>
-    <li><b>Languages:</b> English, Hindi, Bengali, Sanskrit, German (Learning)</li>
-    <li><b>Additional Coursework:</b> Digital IC Design, CMOS VLSI Design, Computer Architecture and Organization, Photonic Integrated Circuits</li>
-  </ul>
-</section>
-
-<div class="divider"></div>
-
-<!-- POSITIONS OF RESPONSIBILITY -->
-<section>
-  <h2>Positions of Responsibility</h2>
-
-  <div class="experience">
-    <div>
-      <h3>Training and Placement Cell Coordinator – Sector Head</h3>
-      <p>Coordinated core placement activities and facilitated interaction between students and recruiters.</p>
-    </div>
-    <img src="images/tpc.png">
-  </div>
-
-  <div class="experience">
-    <div>
-      <h3>Team TIVRA – Core Member (Accumulator Team)</h3>
-      <p>Worked on BMS system design and powertrain integration for electric race car development.</p>
-    </div>
-    <img src="images/tivra.png">
-  </div>
-
-  <div class="experience">
-    <div>
-      <h3>Google Developer Student Club – Executive Member</h3>
-      <p>Organized hackathons and technical workshops to promote peer learning.</p>
-    </div>
-    <img src="images/gdsc.png">
-  </div>
-
-</section>
-
-<div class="divider"></div>
-
-<!-- PUBLICATION -->
-<section>
-  <h2>Publication</h2>
-  <p>
-    Khemraj, Neha Pandey, Gurudatta Singh, <b>Riddhima Sen</b>, Asheesh Kumar Yadav, Kapil Kumar.  
-    <i>“Substrate Optimization in Constructed Wetland–Microbial Fuel Cells: Global Trends, Performance Meta-Analysis, and Feasibility Mapping.”</i>  
-    Springer (Under Review), 2025.
-  </p>
 </section>
 
 <div class="divider"></div>
 
 <!-- ACHIEVEMENTS & INTERESTS -->
-<section>
+<section class="panel">
   <h2>Achievements & Interests</h2>
   <ul>
     <li>Ranked in the Top 2 percentile in B.Tech Electrical Engineering at NIT Delhi.</li>
-    <li>Finalist at Technoxian 2024 – World Robotics Championship (RC Aircraft).</li>
+    <li>Finalist at Technoxian World Robotics Championship.</li>
     <li>Designed TREEBOOK platform enabling donation and redistribution of 150+ books.</li>
     <li>Violin (A2 Level with Distinction) – Trinity College London.</li>
   </ul>
