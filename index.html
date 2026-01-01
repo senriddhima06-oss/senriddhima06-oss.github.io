@@ -138,13 +138,11 @@ li{margin-bottom:10px}
     <h1>Riddhima Sen</h1>
     <p>
       Hello, I am an engineer who enjoys working at the boundary between ideas and realization.
-      I am drawn to problems that require careful thinking, experimentation, and iteration,
-      where understanding the system matters as much as building it. I see engineering as an
-      exploratory process, one that blends analytical reasoning with hands-on design and testing.
-      Whether working with signals, hardware, or complex systems, I value clarity, rigor, and
-      purpose in my work. I thrive in environments that encourage curiosity and deep investigation,
-      and I am motivated by the challenge of turning abstract concepts into reliable,
-      well-engineered systems.
+      I am drawn to problems that demand rigorous thinking, systematic experimentation, and iterative refinement.
+      My interests lie in understanding systems deeply—both theoretically and practically—and translating
+      that understanding into efficient, reliable hardware and algorithms. I value precision, structure,
+      and purpose in engineering, and I am motivated by challenges that require crossing disciplinary boundaries
+      between signal processing, hardware design, and emerging technologies.
     </p>
   </div>
 </section>
@@ -157,7 +155,7 @@ li{margin-bottom:10px}
   <div>Embedded Systems and Hardware–Software Co-Design</div>
   <div>Quantum Computing and Photonic Integrated Circuits</div>
   <div>Artificial Intelligence and Machine Learning for Signal Processing</div>
-  <div>Microbial Fuel Cells and Power Amplification Systems in Renewable Energy</div>
+  <div>Bioelectronic Energy Systems and Renewable Power Amplification</div>
 </div>
 </section>
 
@@ -202,17 +200,19 @@ li{margin-bottom:10px}
 
 <div class="divider"></div>
 
-<!-- PROFESSIONAL EXPERIENCE -->
 <section>
 <h2>Professional Experience</h2>
 
 <div class="section-grid">
 <div>
 <h3>IIT Hyderabad – Summer Research Intern (SURE)</h3>
+<p><i>June – July 2025</i></p>
+<p><b>Supervisor:</b> <i>Dr. Abhishek Kumar</i>, Assistant Professor, Department of Electrical Engineering, IIT Hyderabad</p>
 <ul>
-<li>Designed and synthesized a hardware accelerator implementing LMS optimization on FPGA using Verilog and AXI.</li>
-<li>Implemented LMS-based real-time signal enhancement in FIR filters.</li>
-<li>Validated hardware–software co-design using PYNQ.</li>
+<li>Designed and implemented a complete System-on-Chip (SoC) architecture for FPGA-based hardware acceleration of the LMS optimization algorithm applied to FIR filter signal processing.</li>
+<li>Developed a high-performance, fixed-point Verilog implementation of a 10-tap LMS-optimized FIR filter and synthesized it on ZedBoard and PYNQ-Z2 platforms using AXI-based interfaces.</li>
+<li>Achieved real-time adaptive signal enhancement through LMS-based optimization, validating convergence, stability, and numerical precision.</li>
+<li>Performed end-to-end hardware–software co-design and system validation using Vitis and PYNQ libraries, enabling runtime control and visualization of adaptive filtering behavior.</li>
 </ul>
 <div class="links">
 <a href="assets/SURE_IITH_Report.pdf">Research Report (PDF)</a>
@@ -223,11 +223,14 @@ li{margin-bottom:10px}
 
 <div class="section-grid">
 <div>
-<h3>Startup – Electronics R&D Team</h3>
+<h3>Startup – Electronics R&D Team Member</h3>
+<p><i>August 2025 – Present</i></p>
+<p><b>Supervisor:</b> <i>Dr. Bharathi Raj Muthu</i>, Post-Doctoral Fellow, IFGW – Gleb Wataghin Institute of Physics,  
+University of Campinas (UNICAMP), São Paulo, Brazil</p>
 <ul>
-<li>Designed SOI photonic integrated circuits for quantum random number generation.</li>
-<li>Implemented MMIs, VOAs, grating couplers, and waveguide routing.</li>
-<li>Developed fabrication-ready layouts using gdsfactory and KLayout.</li>
+<li>Designed a silicon-on-insulator (SOI) based photonic integrated circuit for quantum random number generation (QRNG) using vacuum-state homodyne detection.</li>
+<li>Architected and optimized critical photonic components including MMIs, VOAs, grating couplers, waveguides, and homodyne detector interfaces.</li>
+<li>Translated peer-reviewed research designs into fabrication-ready, hierarchical GDS layouts using gdsfactory and KLayout, ensuring modularity, cell reuse, and process compatibility.</li>
 </ul>
 </div>
 <img src="images/startup.png">
@@ -236,50 +239,51 @@ li{margin-bottom:10px}
 <div class="section-grid">
 <div>
 <h3>Chip Web Technologies Pvt. Ltd. – Winter Intern</h3>
+<p><i>December 2024 – January 2025</i></p>
 <ul>
-<li>Worked on Verilog, FSM design, and FPGA IP verification.</li>
+<li>Worked extensively with Verilog HDL to design, simulate, and debug FSM-based digital systems.</li>
+<li>Gained hands-on experience in FPGA IP verification, timing analysis, and sequential logic validation.</li>
+<li>Simulated and analyzed complex digital subsystems, strengthening proficiency in industrial FPGA design workflows.</li>
 </ul>
 </div>
 </div>
 </section>
-
 <div class="divider"></div>
 
 <!-- PROJECTS -->
 <section>
 <h2>Projects</h2>
 
-<!-- 1 -->
 <div class="section-grid">
 <div>
-<h3>High-Efficiency Bioelectric Energy Amplification using LC3108-Based DC–DC Boost Converter</h3>
+<h3>High-Efficiency Bioelectric Energy Amplification using LC3108-Based DC–DC Boost Converter under L.E.S.E.R LAB</h3>
+<p><b>Supervisor:</b> <i>Dr. Kapil Kumar</i>, Assistant Professor & Head of Department, Civil Engineering, NIT Delhi</p>
 <ul>
-<li>Designed energy harvesting architecture using microbial fuel cells.</li>
-<li>Implemented DC-DC boost conversion and efficiency analysis.</li>
+<li>Designed an end-to-end bioelectric energy harvesting system utilizing microbial fuel cells as ultra-low-power sources.</li>
+<li>Implemented and optimized an LC3108-based DC–DC boost conversion architecture, achieving stable voltage amplification and efficiency characterization.</li>
 </ul>
 </div>
 <img src="images/mfc.png">
 </div>
 
-<!-- 2 -->
 <div class="section-grid">
 <div>
-<h3>EEG Preprocessing and Signal Extraction</h3>
+<h3>EEG Preprocessing and Signal Extraction using Fixed-Point Hardware Architectures</h3>
+<p><b>Supervisor:</b> <i>Dr. D. Vaithiyanathan</i>, Assistant Professor, Department of Electronics and Communication Engineering, NIT Delhi</p>
 <ul>
-<li>Generated fixed-point EEG data from PhysioNet datasets.</li>
-<li>Designed Haar-DWT + LMS denoising architecture in Verilog.</li>
+<li>Generated fixed-point EEG datasets from PhysioNet and analyzed noise characteristics in biomedical signals.</li>
+<li>Designed a hardware-efficient Haar-DWT and LMS-based denoising architecture in Verilog, targeting real-time EEG preprocessing.</li>
 </ul>
 </div>
 <img src="images/eeg.png">
 </div>
 
-<!-- 3 -->
 <div class="section-grid">
 <div>
 <h3>Autonomous Fixed-Wing UAV: Airframe Design and ArduPilot Integration</h3>
 <ul>
-<li>Designed autonomous fixed-wing aircraft with Pixhawk.</li>
-<li>Implemented waypoint-based navigation.</li>
+<li>Designed and fabricated a fixed-wing UAV platform optimized for autonomous flight missions.</li>
+<li>Integrated Pixhawk and ArduPilot firmware to implement waypoint-based navigation and flight stabilization.</li>
 </ul>
 <div class="links">
 <a href="https://youtube.com">Flight Video</a>
@@ -288,48 +292,36 @@ li{margin-bottom:10px}
 <img src="images/uav.png">
 </div>
 
-<!-- 4 -->
 <div class="section-grid">
 <div>
-<h3>Embedded Vision Security System using ESP32-CAM</h3>
+<h3>Embedded Vision-Based Security System using ESP32-CAM</h3>
+<p><b>Supervisor:</b> <i>Dr. Sachin Singh</i>, Assistant Professor, Department of Electrical Engineering, NIT Delhi</p>
 <ul>
-<li>Built real-time IoT surveillance system.</li>
-<li>Implemented lightweight face recognition.</li>
+<ul>
+<li>Developed a compact IoT-based surveillance system with real-time image acquisition and processing.</li>
+<li>Implemented lightweight face recognition pipelines optimized for constrained embedded hardware.</li>
 </ul>
 </div>
 <img src="images/esp32.png">
 </div>
 
-<!-- 5 -->
 <div class="section-grid">
 <div>
 <h3>Detection of Interplanetary Coronal Mass Ejections using Python</h3>
 <ul>
-<li>Analyzed solar wind and IMF datasets.</li>
-<li>Extracted ICME features from time-series data.</li>
+<li>Performed large-scale analysis of solar wind plasma and interplanetary magnetic field datasets.</li>
+<li>Extracted and classified ICME signatures from time-series data using signal processing techniques.</li>
 </ul>
 </div>
 <img src="images/icme.png">
 </div>
 
-<!-- 6 -->
-<div class="section-grid">
-<div>
-<h3>Bluetooth-Controlled Arduino Robotic Platform</h3>
-<ul>
-<li>Designed Bluetooth-controlled mobile robot.</li>
-</ul>
-</div>
-<img src="images/bluetooth_car.png">
-</div>
-
-<!-- 7 -->
 <div class="section-grid">
 <div>
 <h3>Scalable Student Database Management System using Python and MySQL</h3>
 <ul>
-<li>Designed role-based academic database.</li>
-<li>Implemented secure Python–MySQL backend.</li>
+<li>Designed a role-based academic database system supporting secure access and data integrity.</li>
+<li>Implemented a robust Python–MySQL backend with authentication, query optimization, and reporting features.</li>
 </ul>
 <div class="links">
 <a href="assets/Student_DBMS_Report.pdf">Project Report (PDF)</a>
@@ -346,11 +338,16 @@ li{margin-bottom:10px}
 <section>
 <h2>Positions of Responsibility</h2>
 <ul>
-<li>Training and Placement Cell Coordinator – Sector Head</li>
-<li>Team TIVRA – Core Member (Accumulator Team)</li>
-<li>Google Developer Student Club – Executive Member</li>
-<li>Social Reform Cell – Executive Member</li>
+<li><b>Training and Placement Cell Coordinator – Sector Head:</b> Coordinated placement activities, facilitated student–recruiter interactions, and managed sector-wise recruitment logistics.</li>
+<li><b>Team TIVRA – Core Member (Accumulator Team):</b> Contributed to the electrical and energy subsystem design for a student electric vehicle project.</li>
+<li><b>Google Developer Student Club – Executive Member:</b> Organized technical workshops and peer-learning sessions focused on software and emerging technologies.</li>
+<li><b>Social Reform Cell – Executive Member:</b> Led and participated in community outreach initiatives aimed at social awareness and student engagement.</li>
 </ul>
+
+<div class="ach-imgs">
+<img src="images/por1.jpg">
+<img src="images/por2.jpg">
+</div>
 </section>
 
 <div class="divider"></div>
@@ -366,27 +363,6 @@ Springer (Under Review), 2025.
 </section>
 
 <div class="divider"></div>
-
-<!-- ACHIEVEMENTS -->
-<section>
-<h2>Achievements & Interests</h2>
-<ul>
-<li>Top 2 percentile in B.Tech Electrical Engineering, NIT Delhi.</li>
-<li>Finalist – Technoxian World Robotics Championship 2024.</li>
-<li>Founder of TREEBOOK – book donation platform.</li>
-<li>Violin A2 Level (Distinction) – Trinity College London.</li>
-</ul>
-
-<p style="margin-top:16px;">
-TREEBOOK Website:
-<a href="https://treebook.in">https://treebook.in</a>
-</p>
-
-<div class="ach-imgs">
-<img src="images/treebook1.jpg">
-<img src="images/treebook2.jpg">
-</div>
-</section>
 
 <!-- CONTACT -->
 <div class="contact">
