@@ -6,118 +6,136 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+/* ================= GLOBAL ================= */
 body{
   margin:0;
   font-family:"Times New Roman", Times, serif;
   color:#1f2937;
-  line-height:1.85;
   background:#ffffff;
+  line-height:1.85;
 }
-
-/* =========================
-   TOP NAVIGATION STRIP
-   ========================= */
-.top-strip{
-  width:100%;
-  background:#e6e9ee;
-  border-bottom:1px solid #cbd5e1;
-}
-
-.top-strip-inner{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(8,1fr);
-}
-
-.top-strip div{
-  padding:16px 10px;
-  text-align:center;
-  font-size:15px;
-  letter-spacing:0.4px;
-  border-right:1px solid #cbd5e1;
-}
-
-.top-strip div:last-child{border-right:none}
-
-/* ========================= */
 
 .page{
-  max-width:980px;
+  max-width:1000px;
   margin:70px auto;
-  padding:0 26px;
+  padding:0 28px;
 }
 
-/* SECTION BACKGROUNDS */
-section:nth-of-type(odd){background:#f4f6f8}
-section:nth-of-type(even){background:#e6e9ee}
-
-section{
-  padding:45px 40px;
+/* ================= TOP HEADER STRIP ================= */
+.top-header{
+  width:100%;
+  background:#000000;
+  display:flex;
+  justify-content:space-between;
+  padding:18px 40px;
+  box-sizing:border-box;
 }
 
-/* HEADINGS */
-h1{font-size:44px;font-weight:normal;margin-bottom:30px}
+.top-header div{
+  color:#ffffff;
+  font-size:14px;
+  font-weight:bold;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  border-right:1px solid rgba(255,255,255,0.3);
+  padding-right:22px;
+}
+
+.top-header div:last-child{
+  border-right:none;
+}
+
+/* ================= HEADINGS ================= */
+h1{
+  font-size:46px;
+  font-weight:bold;
+  color:#020617;
+  margin-bottom:28px;
+}
+
 h2{
   font-size:32px;
-  font-weight:normal;
-  margin:30px 0 26px;
+  font-weight:bold;
+  text-transform:uppercase;
+  color:#020617;
+  margin:80px 0 36px;
 }
+
 h2::after{
   content:"";
   display:block;
-  width:60px;
+  width:64px;
   height:2px;
   background:#6366f1;
-  margin-top:10px;
+  margin-top:12px;
 }
-h3{font-size:26px;font-weight:500;margin-bottom:14px}
 
-p{font-size:18px;max-width:68ch;margin:0}
-ul{font-size:17.5px;padding-left:20px;margin-top:12px}
+h3{
+  font-size:26px;
+  font-weight:500;
+  color:#020617;
+  margin-bottom:14px;
+}
+
+p{
+  font-size:18px;
+  max-width:70ch;
+  margin:0;
+}
+
+ul{
+  font-size:17.5px;
+  padding-left:20px;
+  margin-top:14px;
+}
+
 li{margin-bottom:10px}
 
-/* =========================
-   INTRO
-   ========================= */
+.divider{
+  margin:80px auto;
+  width:140px;
+  height:1px;
+  background:#d1d5db;
+}
+
+/* ================= INTRO ================= */
 .intro{
   display:grid;
-  grid-template-columns:1fr 1.3fr;
-  gap:60px;
+  grid-template-columns:1fr 1.4fr;
+  gap:70px;
   align-items:center;
 }
 
-/* BIG SQUARE PROFILE PHOTO */
 .photo img{
-  width:320px;
-  height:320px;
+  width:360px;
+  height:360px;
   object-fit:cover;
-  border:2px solid #cbd5e1;
+  border-radius:0;
+  border:1px solid #e5e7eb;
 }
 
-/* =========================
-   INTERESTS
-   ========================= */
+/* ================= INTERESTS ================= */
 .interest-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:26px;
-  margin-top:35px;
+  margin-top:36px;
 }
+
 .interest-grid div{
   font-size:18px;
   padding-left:18px;
   border-left:3px solid #6366f1;
 }
 
-/* =========================
-   SECTION GRID
-   ========================= */
+/* ================= SECTIONS ================= */
 .section-grid{
   display:grid;
   grid-template-columns:1.4fr 1fr;
-  gap:40px;
-  margin-bottom:45px;
+  gap:42px;
+  margin-bottom:65px;
+  padding-top:32px;
+  border-top:1px solid #e5e7eb;
   align-items:center;
 }
 
@@ -130,37 +148,33 @@ section:nth-of-type(even) .section-grid > div:first-child{
   border-left-color:#0ea5e9;
 }
 
-/* DEFAULT IMAGE (CROPPED) */
+/* DEFAULT CROPPED IMAGES */
 .section-grid img{
   width:100%;
   height:240px;
   object-fit:cover;
-  border:1px solid #cbd5e1;
+  border:1px solid #e5e7eb;
   background:#f8fafc;
 }
 
-/* PROFESSIONAL EXPERIENCE IMAGES — NOT CROPPED */
-.prof-exp img{
+/* PROFESSIONAL EXPERIENCE — NO CROPPING */
+.prof-exp .section-grid img{
+  height:auto;
+  max-height:320px;
   object-fit:contain;
+  background:#ffffff;
 }
 
-/* =========================
-   EDUCATION
-   ========================= */
+/* ================= EDUCATION ================= */
 .edu-head{
   display:flex;
   align-items:center;
   gap:14px;
 }
-.edu-head img{
-  width:44px;
-  height:44px;
-  object-fit:contain;
-}
 
-/* =========================
-   LINKS
-   ========================= */
+.edu-head img{width:44px}
+
+/* ================= LINKS ================= */
 .links a{
   display:inline-block;
   margin-top:14px;
@@ -168,33 +182,33 @@ section:nth-of-type(even) .section-grid > div:first-child{
   font-size:16px;
   color:#4338ca;
   text-decoration:none;
+  border-bottom:1px solid transparent;
 }
-.links a:hover{text-decoration:underline}
 
-/* =========================
-   ACHIEVEMENTS
-   ========================= */
+.links a:hover{border-color:#4338ca}
+
+/* ================= ACHIEVEMENTS IMAGES ================= */
 .ach-imgs{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:24px;
   margin-top:30px;
 }
+
 .ach-imgs img{
   width:100%;
   height:220px;
   object-fit:cover;
-  border:1px solid #cbd5e1;
+  border:1px solid #e5e7eb;
 }
 
-/* =========================
-   CONTACT
-   ========================= */
+/* ================= CONTACT ================= */
 .contact{
   text-align:center;
-  margin:70px 0 40px;
+  margin:120px 0 50px;
   font-size:18px;
 }
+
 .contact a{
   margin:0 18px;
   color:#020617;
@@ -202,37 +216,41 @@ section:nth-of-type(even) .section-grid > div:first-child{
   border-bottom:1px solid #cbd5e1;
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+/* ================= RESPONSIVE ================= */
 @media(max-width:900px){
   .intro,
   .section-grid,
   .interest-grid,
-  .ach-imgs,
-  .top-strip-inner{
-    grid-template-columns:1fr
+  .ach-imgs{
+    grid-template-columns:1fr;
   }
-  .photo img{width:260px;height:260px}
+
+  .photo img{
+    width:100%;
+    height:auto;
+  }
+
   p{max-width:100%}
+
+  .top-header{
+    flex-wrap:wrap;
+    gap:12px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOP STRIP -->
-<div class="top-strip">
-  <div class="top-strip-inner">
-    <div>About</div>
-    <div>Interests</div>
-    <div>Education</div>
-    <div>Experience</div>
-    <div>Projects</div>
-    <div>Positions</div>
-    <div>Publications</div>
-    <div>Contact</div>
-  </div>
+<!-- TOP HEADER -->
+<div class="top-header">
+  <div>About</div>
+  <div>Interests</div>
+  <div>Education</div>
+  <div>Experience</div>
+  <div>Projects</div>
+  <div>Publications</div>
+  <div>Contact</div>
 </div>
 
 <div class="page">
