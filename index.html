@@ -11,8 +11,36 @@ body{
   font-family:"Times New Roman", Times, serif;
   color:#1f2937;
   line-height:1.85;
-  background:#f4f6f8;
+  background:#ffffff;
 }
+
+/* =========================
+   TOP NAVIGATION STRIP
+   ========================= */
+.top-strip{
+  width:100%;
+  background:#e6e9ee;
+  border-bottom:1px solid #cbd5e1;
+}
+
+.top-strip-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+}
+
+.top-strip div{
+  padding:16px 10px;
+  text-align:center;
+  font-size:15px;
+  letter-spacing:0.4px;
+  border-right:1px solid #cbd5e1;
+}
+
+.top-strip div:last-child{border-right:none}
+
+/* ========================= */
 
 .page{
   max-width:980px;
@@ -29,11 +57,11 @@ section{
 }
 
 /* HEADINGS */
-h1{font-size:44px;font-weight:normal;margin-bottom:28px}
+h1{font-size:44px;font-weight:normal;margin-bottom:30px}
 h2{
   font-size:32px;
   font-weight:normal;
-  margin:35px 0 28px;
+  margin:30px 0 26px;
 }
 h2::after{
   content:"";
@@ -49,23 +77,27 @@ p{font-size:18px;max-width:68ch;margin:0}
 ul{font-size:17.5px;padding-left:20px;margin-top:12px}
 li{margin-bottom:10px}
 
-/* INTRO */
+/* =========================
+   INTRO
+   ========================= */
 .intro{
   display:grid;
-  grid-template-columns:1fr 1.2fr;
+  grid-template-columns:1fr 1.3fr;
   gap:60px;
   align-items:center;
 }
 
-/* SQUARE PROFILE PHOTO */
+/* BIG SQUARE PROFILE PHOTO */
 .photo img{
-  width:240px;
-  height:240px;
+  width:320px;
+  height:320px;
   object-fit:cover;
   border:2px solid #cbd5e1;
 }
 
-/* INTERESTS */
+/* =========================
+   INTERESTS
+   ========================= */
 .interest-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -78,7 +110,9 @@ li{margin-bottom:10px}
   border-left:3px solid #6366f1;
 }
 
-/* SECTION GRID */
+/* =========================
+   SECTION GRID
+   ========================= */
 .section-grid{
   display:grid;
   grid-template-columns:1.4fr 1fr;
@@ -96,9 +130,8 @@ section:nth-of-type(even) .section-grid > div:first-child{
   border-left-color:#0ea5e9;
 }
 
-/* UNIFORM IMAGES */
-.section-grid img,
-.ach-imgs img{
+/* DEFAULT IMAGE (CROPPED) */
+.section-grid img{
   width:100%;
   height:240px;
   object-fit:cover;
@@ -106,7 +139,14 @@ section:nth-of-type(even) .section-grid > div:first-child{
   background:#f8fafc;
 }
 
-/* EDUCATION */
+/* PROFESSIONAL EXPERIENCE IMAGES — NOT CROPPED */
+.prof-exp img{
+  object-fit:contain;
+}
+
+/* =========================
+   EDUCATION
+   ========================= */
 .edu-head{
   display:flex;
   align-items:center;
@@ -118,7 +158,9 @@ section:nth-of-type(even) .section-grid > div:first-child{
   object-fit:contain;
 }
 
-/* LINKS */
+/* =========================
+   LINKS
+   ========================= */
 .links a{
   display:inline-block;
   margin-top:14px;
@@ -129,15 +171,25 @@ section:nth-of-type(even) .section-grid > div:first-child{
 }
 .links a:hover{text-decoration:underline}
 
-/* ACHIEVEMENTS */
+/* =========================
+   ACHIEVEMENTS
+   ========================= */
 .ach-imgs{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:24px;
   margin-top:30px;
 }
+.ach-imgs img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border:1px solid #cbd5e1;
+}
 
-/* CONTACT */
+/* =========================
+   CONTACT
+   ========================= */
 .contact{
   text-align:center;
   margin:70px 0 40px;
@@ -150,20 +202,39 @@ section:nth-of-type(even) .section-grid > div:first-child{
   border-bottom:1px solid #cbd5e1;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+   ========================= */
 @media(max-width:900px){
   .intro,
   .section-grid,
   .interest-grid,
-  .ach-imgs{
+  .ach-imgs,
+  .top-strip-inner{
     grid-template-columns:1fr
   }
+  .photo img{width:260px;height:260px}
   p{max-width:100%}
 }
 </style>
 </head>
 
 <body>
+
+<!-- TOP STRIP -->
+<div class="top-strip">
+  <div class="top-strip-inner">
+    <div>About</div>
+    <div>Interests</div>
+    <div>Education</div>
+    <div>Experience</div>
+    <div>Projects</div>
+    <div>Positions</div>
+    <div>Publications</div>
+    <div>Contact</div>
+  </div>
+</div>
+
 <div class="page">
 
 <!-- ABOUT -->
