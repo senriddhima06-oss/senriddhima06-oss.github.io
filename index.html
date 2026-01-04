@@ -10,91 +10,59 @@ body{
   margin:0;
   font-family:"Times New Roman", Times, serif;
   color:#1f2937;
-  background:
-    linear-gradient(#fafafa,#f4f6fb),
-    repeating-linear-gradient(
-      45deg,
-      rgba(0,0,0,0.015),
-      rgba(0,0,0,0.015) 1px,
-      transparent 1px,
-      transparent 6px
-    );
-  line-height:1.9;
+  line-height:1.85;
+  background:#f4f6f8;
 }
 
 .page{
   max-width:980px;
-  margin:120px auto;
+  margin:70px auto;
   padding:0 26px;
 }
 
-h1{
-  font-size:44px;
-  font-weight:normal;
-  color:#020617;
-  margin-bottom:30px
+/* SECTION BACKGROUNDS */
+section:nth-of-type(odd){background:#f4f6f8}
+section:nth-of-type(even){background:#e6e9ee}
+
+section{
+  padding:45px 40px;
 }
 
+/* HEADINGS */
+h1{font-size:44px;font-weight:normal;margin-bottom:28px}
 h2{
   font-size:32px;
   font-weight:normal;
-  color:#020617;
-  margin:110px 0 45px;
+  margin:35px 0 28px;
 }
-
 h2::after{
   content:"";
   display:block;
   width:60px;
   height:2px;
   background:#6366f1;
-  margin-top:12px;
+  margin-top:10px;
 }
+h3{font-size:26px;font-weight:500;margin-bottom:14px}
 
-h3{
-  font-size:26px;
-  font-weight:500;
-  letter-spacing:-0.3px;
-  color:#020617;
-  margin-bottom:14px;
-}
-
-p{
-  font-size:18px;
-  max-width:68ch;
-  margin:0;
-}
-
-ul{
-  font-size:17.5px;
-  padding-left:20px;
-  margin-top:12px
-}
-
+p{font-size:18px;max-width:68ch;margin:0}
+ul{font-size:17.5px;padding-left:20px;margin-top:12px}
 li{margin-bottom:10px}
-
-.divider{
-  margin:120px auto;
-  width:140px;
-  height:1px;
-  background:#d1d5db;
-}
 
 /* INTRO */
 .intro{
   display:grid;
   grid-template-columns:1fr 1.2fr;
-  gap:80px;
+  gap:60px;
   align-items:center;
 }
 
+/* SQUARE PROFILE PHOTO */
 .photo img{
-  width:260px;
-  height:260px;
+  width:240px;
+  height:240px;
   object-fit:cover;
-  border-radius:50%;
-  outline:1px solid #e5e7eb;
-  outline-offset:-10px;
+  border:2px solid #cbd5e1;
 }
 
 /* INTERESTS */
@@ -102,23 +70,20 @@ li{margin-bottom:10px}
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:26px;
-  margin-top:40px;
+  margin-top:35px;
 }
-
 .interest-grid div{
   font-size:18px;
   padding-left:18px;
   border-left:3px solid #6366f1;
 }
 
-/* SECTION LAYOUT */
+/* SECTION GRID */
 .section-grid{
   display:grid;
   grid-template-columns:1.4fr 1fr;
   gap:40px;
-  margin-bottom:90px;
-  padding-top:40px;
-  border-top:1px solid #e5e7eb;
+  margin-bottom:45px;
   align-items:center;
 }
 
@@ -131,12 +96,13 @@ section:nth-of-type(even) .section-grid > div:first-child{
   border-left-color:#0ea5e9;
 }
 
-.section-grid img{
+/* UNIFORM IMAGES */
+.section-grid img,
+.ach-imgs img{
   width:100%;
-  height:260px;
+  height:240px;
   object-fit:cover;
-  outline:1px solid #e5e7eb;
-  outline-offset:-10px;
+  border:1px solid #cbd5e1;
   background:#f8fafc;
 }
 
@@ -146,8 +112,11 @@ section:nth-of-type(even) .section-grid > div:first-child{
   align-items:center;
   gap:14px;
 }
-
-.edu-head img{width:44px}
+.edu-head img{
+  width:44px;
+  height:44px;
+  object-fit:contain;
+}
 
 /* LINKS */
 .links a{
@@ -157,12 +126,10 @@ section:nth-of-type(even) .section-grid > div:first-child{
   font-size:16px;
   color:#4338ca;
   text-decoration:none;
-  border-bottom:1px solid transparent;
 }
+.links a:hover{text-decoration:underline}
 
-.links a:hover{border-color:#4338ca}
-
-/* ACHIEVEMENT IMAGES */
+/* ACHIEVEMENTS */
 .ach-imgs{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -170,21 +137,12 @@ section:nth-of-type(even) .section-grid > div:first-child{
   margin-top:30px;
 }
 
-.ach-imgs img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  outline:1px solid #e5e7eb;
-  outline-offset:-10px;
-}
-
 /* CONTACT */
 .contact{
   text-align:center;
-  margin:160px 0 60px;
+  margin:70px 0 40px;
   font-size:18px;
 }
-
 .contact a{
   margin:0 18px;
   color:#020617;
@@ -192,6 +150,7 @@ section:nth-of-type(even) .section-grid > div:first-child{
   border-bottom:1px solid #cbd5e1;
 }
 
+/* MOBILE */
 @media(max-width:900px){
   .intro,
   .section-grid,
@@ -199,7 +158,6 @@ section:nth-of-type(even) .section-grid > div:first-child{
   .ach-imgs{
     grid-template-columns:1fr
   }
-
   p{max-width:100%}
 }
 </style>
