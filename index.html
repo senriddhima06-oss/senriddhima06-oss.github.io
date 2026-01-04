@@ -56,13 +56,19 @@ section{
   padding:45px 40px;
 }
 
-/* HEADINGS */
-h1{font-size:44px;font-weight:normal;margin-bottom:30px}
+/* HEADINGS — NOT BOLD */
+h1{
+  font-size:44px;
+  font-weight:normal;
+  margin-bottom:30px
+}
+
 h2{
   font-size:32px;
   font-weight:normal;
   margin:30px 0 26px;
 }
+
 h2::after{
   content:"";
   display:block;
@@ -71,8 +77,14 @@ h2::after{
   background:#6366f1;
   margin-top:10px;
 }
-h3{font-size:26px;font-weight:500;margin-bottom:14px}
 
+h3{
+  font-size:26px;
+  font-weight:normal;
+  margin:0;
+}
+
+/* TEXT */
 p{font-size:18px;max-width:68ch;margin:0}
 ul{font-size:17.5px;padding-left:20px;margin-top:12px}
 li{margin-bottom:10px}
@@ -87,7 +99,6 @@ li{margin-bottom:10px}
   align-items:center;
 }
 
-/* BIG SQUARE PROFILE PHOTO */
 .photo img{
   width:320px;
   height:320px;
@@ -104,6 +115,7 @@ li{margin-bottom:10px}
   gap:26px;
   margin-top:35px;
 }
+
 .interest-grid div{
   font-size:18px;
   padding-left:18px;
@@ -139,19 +151,21 @@ section:nth-of-type(even) .section-grid > div:first-child{
   background:#f8fafc;
 }
 
-/* PROFESSIONAL EXPERIENCE IMAGES — NOT CROPPED */
+/* PROFESSIONAL EXPERIENCE — NOT CROPPED */
 .prof-exp img{
   object-fit:contain;
 }
 
 /* =========================
-   EDUCATION
+   EDUCATION (FIXED ALIGNMENT)
    ========================= */
 .edu-head{
   display:flex;
   align-items:center;
   gap:14px;
+  white-space:nowrap;
 }
+
 .edu-head img{
   width:44px;
   height:44px;
@@ -169,6 +183,7 @@ section:nth-of-type(even) .section-grid > div:first-child{
   color:#4338ca;
   text-decoration:none;
 }
+
 .links a:hover{text-decoration:underline}
 
 /* =========================
@@ -180,6 +195,7 @@ section:nth-of-type(even) .section-grid > div:first-child{
   gap:24px;
   margin-top:30px;
 }
+
 .ach-imgs img{
   width:100%;
   height:220px;
@@ -195,6 +211,7 @@ section:nth-of-type(even) .section-grid > div:first-child{
   margin:70px 0 40px;
   font-size:18px;
 }
+
 .contact a{
   margin:0 18px;
   color:#020617;
@@ -213,7 +230,12 @@ section:nth-of-type(even) .section-grid > div:first-child{
   .top-strip-inner{
     grid-template-columns:1fr
   }
-  .photo img{width:260px;height:260px}
+
+  .photo img{
+    width:260px;
+    height:260px;
+  }
+
   p{max-width:100%}
 }
 </style>
@@ -267,21 +289,6 @@ section:nth-of-type(even) .section-grid > div:first-child{
   <div>Biomedical Signal Analysis and Computational Neuroscience</div>
 </div>
 </section>
-
-<!-- INTERESTS -->
-<section>
-<h2>Areas of Interest</h2>
-<div class="interest-grid">
-  <div>VLSI Design and Digital Integrated Circuit Architecture</div>
-  <div>Embedded Systems and Hardware–Software Co-Design</div>
-  <div>Quantum Computing and Photonic Integrated Circuits</div>
-  <div>Artificial Intelligence and Machine Learning for Signal Processing</div>
-  <div>Bioelectronic Energy Systems and Renewable Power Amplification</div>
-  <div>Biomedical Signal Analysis and Computational Neuroscience</div>
-</div>
-</section>
-
-<div class="divider"></div>
 
 <!-- EDUCATION -->
 <section>
