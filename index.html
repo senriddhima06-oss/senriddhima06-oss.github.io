@@ -10,39 +10,69 @@ body{
   margin:0;
   font-family:"Times New Roman", Times, serif;
   color:#1f2937;
-  background:
-    linear-gradient(#fafafa,#f4f6fb),
-    repeating-linear-gradient(
-      45deg,
-      rgba(0,0,0,0.015),
-      rgba(0,0,0,0.015) 1px,
-      transparent 1px,
-      transparent 6px
-    );
-  line-height:1.9;
+  line-height:1.85;
+  background:#ffffff;
 }
+
+/* =========================
+   TOP NAVIGATION STRIP
+   ========================= */
+.top-strip{
+  width:100%;
+  background:#000000;
+}
+
+.top-strip-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+}
+
+.top-strip div{
+  padding:16px 8px;
+  text-align:center;
+  font-size:14px;
+  font-weight:bold;
+  letter-spacing:1px;
+  color:#ffffff;
+  border-right:1px solid #333;
+  text-transform:uppercase;
+}
+
+.top-strip div:last-child{
+  border-right:none;
+}
+
+/* ========================= */
 
 .page{
   max-width:980px;
-  margin:100px auto;
+  margin:70px auto;
   padding:0 26px;
+}
+
+/* SECTION BACKGROUNDS */
+section:nth-of-type(odd){background:#f4f6f8}
+section:nth-of-type(even){background:#e6e9ee}
+
+section{
+  padding:45px 40px;
 }
 
 /* HEADINGS */
 h1{
   font-size:44px;
-  font-weight:bold;
-  text-transform:uppercase;
-  color:#020617;
-  margin-bottom:30px
+  font-weight:normal;
+  margin-bottom:30px;
 }
 
 h2{
-  font-size:32px;
+  font-size:30px;
   font-weight:bold;
+  margin:30px 0 26px;
   text-transform:uppercase;
-  color:#020617;
-  margin:80px 0 40px;
+  letter-spacing:1px;
 }
 
 h2::after{
@@ -51,13 +81,14 @@ h2::after{
   width:60px;
   height:2px;
   background:#6366f1;
-  margin-top:12px;
+  margin-top:10px;
 }
 
 h3{
-  font-size:26px;
-  font-weight:500;
-  color:#020617;
+  font-size:24px;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:0.6px;
   margin-bottom:14px;
 }
 
@@ -70,41 +101,37 @@ p{
 ul{
   font-size:17.5px;
   padding-left:20px;
-  margin-top:12px
+  margin-top:12px;
 }
 
 li{margin-bottom:10px}
 
-.divider{
-  margin:90px auto;
-  width:140px;
-  height:1px;
-  background:#d1d5db;
-}
-
-/* INTRO */
+/* =========================
+   INTRO
+   ========================= */
 .intro{
   display:grid;
   grid-template-columns:1fr 1.3fr;
-  gap:70px;
+  gap:60px;
   align-items:center;
 }
 
+/* BIG SQUARE PROFILE PHOTO */
 .photo img{
   width:340px;
   height:340px;
   object-fit:cover;
-  border-radius:0;
-  outline:1px solid #e5e7eb;
-  outline-offset:-10px;
+  border:2px solid #cbd5e1;
 }
 
-/* INTERESTS */
+/* =========================
+   INTERESTS
+   ========================= */
 .interest-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:26px;
-  margin-top:40px;
+  margin-top:35px;
 }
 
 .interest-grid div{
@@ -113,14 +140,14 @@ li{margin-bottom:10px}
   border-left:3px solid #6366f1;
 }
 
-/* SECTION LAYOUT */
+/* =========================
+   SECTION GRID
+   ========================= */
 .section-grid{
   display:grid;
   grid-template-columns:1.4fr 1fr;
   gap:40px;
-  margin-bottom:60px;
-  padding-top:30px;
-  border-top:1px solid #e5e7eb;
+  margin-bottom:45px;
   align-items:center;
 }
 
@@ -133,34 +160,38 @@ section:nth-of-type(even) .section-grid > div:first-child{
   border-left-color:#0ea5e9;
 }
 
-/* DEFAULT CROPPED IMAGES */
+/* DEFAULT IMAGE (CROPPED) */
 .section-grid img{
   width:100%;
-  height:260px;
+  height:240px;
   object-fit:cover;
-  outline:1px solid #e5e7eb;
-  outline-offset:-10px;
+  border:1px solid #cbd5e1;
   background:#f8fafc;
 }
 
-/* PROFESSIONAL EXPERIENCE — NO CROPPING */
-.prof-exp .section-grid img{
-  height:auto;
-  max-height:320px;
+/* PROFESSIONAL EXPERIENCE IMAGES — NOT CROPPED */
+.prof-exp img{
   object-fit:contain;
-  background:#ffffff;
 }
 
-/* EDUCATION */
+/* =========================
+   EDUCATION ICON
+   ========================= */
 .edu-head{
   display:flex;
   align-items:center;
   gap:14px;
 }
 
-.edu-head img{width:44px}
+.edu-head img{
+  width:44px;
+  height:44px;
+  object-fit:contain;
+}
 
-/* LINKS */
+/* =========================
+   LINKS
+   ========================= */
 .links a{
   display:inline-block;
   margin-top:14px;
@@ -168,12 +199,15 @@ section:nth-of-type(even) .section-grid > div:first-child{
   font-size:16px;
   color:#4338ca;
   text-decoration:none;
-  border-bottom:1px solid transparent;
 }
 
-.links a:hover{border-color:#4338ca}
+.links a:hover{
+  text-decoration:underline;
+}
 
-/* ACHIEVEMENT IMAGES */
+/* =========================
+   ACHIEVEMENTS
+   ========================= */
 .ach-imgs{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -185,14 +219,15 @@ section:nth-of-type(even) .section-grid > div:first-child{
   width:100%;
   height:220px;
   object-fit:cover;
-  outline:1px solid #e5e7eb;
-  outline-offset:-10px;
+  border:1px solid #cbd5e1;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+   ========================= */
 .contact{
   text-align:center;
-  margin:140px 0 60px;
+  margin:70px 0 40px;
   font-size:18px;
 }
 
@@ -203,17 +238,21 @@ section:nth-of-type(even) .section-grid > div:first-child{
   border-bottom:1px solid #cbd5e1;
 }
 
+/* =========================
+   MOBILE
+   ========================= */
 @media(max-width:900px){
   .intro,
   .section-grid,
   .interest-grid,
-  .ach-imgs{
-    grid-template-columns:1fr
+  .ach-imgs,
+  .top-strip-inner{
+    grid-template-columns:1fr;
   }
 
   .photo img{
-    width:100%;
-    height:auto;
+    width:260px;
+    height:260px;
   }
 
   p{max-width:100%}
@@ -222,17 +261,19 @@ section:nth-of-type(even) .section-grid > div:first-child{
 </head>
 
 <body>
-<div class="page">
 
-<!-- TOP HEADER -->
-<div class="top-header">
-  <div>About</div>
-  <div>Interests</div>
-  <div>Education</div>
-  <div>Experience</div>
-  <div>Projects</div>
-  <div>Publications</div>
-  <div>Contact</div>
+<!-- TOP NAVIGATION STRIP -->
+<div class="top-strip">
+  <div class="top-strip-inner">
+    <div>ABOUT</div>
+    <div>INTERESTS</div>
+    <div>EDUCATION</div>
+    <div>EXPERIENCE</div>
+    <div>PROJECTS</div>
+    <div>POSITIONS</div>
+    <div>PUBLICATIONS</div>
+    <div>CONTACT</div>
+  </div>
 </div>
 
 <div class="page">
