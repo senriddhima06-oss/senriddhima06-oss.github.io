@@ -128,6 +128,17 @@ li{ margin-bottom:10px; }
   border-left:3px solid #6366f1;
   font-size:18px;
 }
+/* =========================
+   EDUCATION FIX — SINGLE COLUMN
+   ========================= */
+.education .section-grid{
+  grid-template-columns:1fr;
+}
+
+.education .section-grid > div:first-child{
+  border-left:3px solid #6366f1;
+  padding-left:26px;
+}
 
 /* =========================
    SECTION GRID (TEXT + IMAGE)
@@ -282,7 +293,7 @@ section:nth-of-type(even) .section-grid > div:first-child{
 </section>
 
 <!-- EDUCATION -->
-<section>
+<section class="education">
 <h2>Education</h2>
 
 <div class="section-grid">
