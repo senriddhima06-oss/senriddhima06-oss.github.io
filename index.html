@@ -19,7 +19,7 @@ body{
    ========================= */
 .top-strip{
   width:100%;
-  background:#0f172a;
+  background:#1e2a78; /* NIT Delhi logo blue */
 }
 
 .top-strip-inner{
@@ -128,20 +128,9 @@ li{ margin-bottom:10px; }
   border-left:3px solid #6366f1;
   font-size:18px;
 }
-/* =========================
-   EDUCATION FIX — SINGLE COLUMN
-   ========================= */
-.education .section-grid{
-  grid-template-columns:1fr;
-}
-
-.education .section-grid > div:first-child{
-  border-left:3px solid #6366f1;
-  padding-left:26px;
-}
 
 /* =========================
-   SECTION GRID (TEXT + IMAGE)
+   SECTION GRID
    ========================= */
 .section-grid{
   display:grid;
@@ -160,7 +149,6 @@ section:nth-of-type(even) .section-grid > div:first-child{
   border-left-color:#0ea5e9;
 }
 
-/* DEFAULT IMAGE SIZE (PROJECTS ETC.) */
 .section-grid img{
   width:100%;
   height:240px;
@@ -170,10 +158,30 @@ section:nth-of-type(even) .section-grid > div:first-child{
 }
 
 /* =========================
+   EDUCATION FIX
+   ========================= */
+.education .section-grid{
+  grid-template-columns:1fr;
+}
+
+.edu-head{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:10px;
+}
+
+.edu-head img{
+  width:70px;
+  height:auto;
+  object-fit:contain;
+}
+
+/* =========================
    PROFESSIONAL EXPERIENCE IMAGE FIX
    ========================= */
 .section-grid.prof-exp img{
-  height:520px;          /* ✅ ONLY THIS IS DIFFERENT */
+  height:520px;
   object-fit:contain;
   background:#ffffff;
   border:1px solid #94a3b8;
@@ -234,6 +242,11 @@ section:nth-of-type(even) .section-grid > div:first-child{
     grid-template-columns:1fr;
   }
 
+  .edu-head{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
   .section-grid img,
   .section-grid.prof-exp img{
     height:auto;
@@ -259,6 +272,7 @@ section:nth-of-type(even) .section-grid > div:first-child{
 </div>
 
 <div class="page">
+
 <!-- ABOUT -->
 <section class="intro">
   <div class="photo">
@@ -297,41 +311,38 @@ section:nth-of-type(even) .section-grid > div:first-child{
 <h2>Education</h2>
 
 <div class="section-grid">
-<div>
-  <div class="edu-head">
-    <img src="images/nitd_logo.png">
-    <h3>National Institute of Technology Delhi</h3>
+  <div>
+    <div class="edu-head">
+      <img src="images/nitd_logo.png">
+      <h3>National Institute of Technology Delhi</h3>
+    </div>
+    <p><b>B.Tech in Electrical Engineering</b> (2023–2027)</p>
+    <p>CGPA: 8.65 (upto 5th semester)</p>
   </div>
-  <p><b>B.Tech in Electrical Engineering</b> (2023–2027)</p>
-  <p>CGPA: 8.6 (till 4th Semester)</p>
-</div>
 </div>
 
 <div class="section-grid">
-<div>
-  <div class="edu-head">
-    <img src="images/iitm_logo.png">
-    <h3>Indian Institute of Technology Madras (Hybrid)</h3>
+  <div>
+    <div class="edu-head">
+      <img src="images/iitm_logo.png">
+      <h3>Indian Institute of Technology Madras (Hybrid)</h3>
+    </div>
+    <p><b>B.S. in Electronic Systems</b> (2024–2028)</p>
+    <p>CGPA: 8.4 (ongoing diploma)</p>
   </div>
-  <p><b>B.S. in Electronic Systems</b> (2024–2028)</p>
-  <p>CGPA: 8.53</p>
-</div>
 </div>
 
 <div class="section-grid">
-<div>
-  <div class="edu-head">
-    <img src="images/gbs_logo.jfif">
-    <h3>Gyan Bharati School, New Delhi</h3>
+  <div>
+    <div class="edu-head">
+      <img src="images/gbs_logo.jfif">
+      <h3>Gyan Bharati School, New Delhi</h3>
+    </div>
+    <p>Class XII: 95% | Class X: 96.7%</p>
   </div>
-  <p>Class XII: 95% | Class X: 96.7%</p>
 </div>
-</div>
+
 </section>
-
-<div class="divider"></div>
-
-<section>
 <h2>Professional Experience</h2>
 
 <div class="section-grid prof-exp">
