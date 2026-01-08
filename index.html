@@ -44,7 +44,7 @@ body{
 }
 
 /* =========================
-   PAGE CONTAINER
+   PAGE
    ========================= */
 .page{
   max-width:980px;
@@ -53,7 +53,7 @@ body{
 }
 
 /* =========================
-   SECTION BACKGROUNDS
+   SECTIONS
    ========================= */
 section:nth-of-type(odd){background:#f4f6f8}
 section:nth-of-type(even){background:#e6e9ee}
@@ -63,27 +63,24 @@ section{
 }
 
 /* =========================
-   HEADINGS — UNIFIED STYLE
+   HEADINGS
    ========================= */
 h1{
   font-size:44px;
   font-weight:normal;
-  letter-spacing:0.4px;
   margin-bottom:26px;
 }
 
 h2{
   font-size:40px;
   font-weight:normal;
-  letter-spacing:0.35px;
-  margin:0 0 34px;
+  margin-bottom:34px;
 }
 
 h3{
   font-size:26px;
   font-weight:normal;
-  letter-spacing:0.25px;
-  margin:0 0 10px;
+  margin-bottom:10px;
 }
 
 /* =========================
@@ -92,23 +89,18 @@ h3{
 p{
   font-size:18px;
   max-width:65ch;
-  margin:0;
   text-align:justify;
-  text-justify:inter-word;
 }
 
 ul{
   font-size:17.5px;
   padding-left:20px;
-  margin-top:12px;
 }
 
-li{
-  margin-bottom:10px;
-}
+li{ margin-bottom:10px; }
 
 /* =========================
-   INTRO / ABOUT
+   INTRO
    ========================= */
 .intro{
   display:grid;
@@ -117,23 +109,8 @@ li{
   align-items:center;
 }
 
-/* REMOVE PARAGRAPH GAPS ONLY IN ABOUT */
-.intro p{
-  margin:0;
-}
-
-.photo{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-/* ABOUT ME PHOTO — ONLY THIS CHANGES */
-.intro .photo img{
+.photo img{
   width:320px;
-  height:auto;
-  max-height:520px;
-  object-fit:cover;
   border:2px solid #cbd5e1;
 }
 
@@ -144,17 +121,16 @@ li{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:26px;
-  margin-top:35px;
 }
 
 .interest-grid div{
-  font-size:18px;
   padding-left:18px;
   border-left:3px solid #6366f1;
+  font-size:18px;
 }
 
 /* =========================
-   SECTION GRID
+   SECTION GRID (TEXT + IMAGE)
    ========================= */
 .section-grid{
   display:grid;
@@ -173,7 +149,7 @@ section:nth-of-type(even) .section-grid > div:first-child{
   border-left-color:#0ea5e9;
 }
 
-/* ALL OTHER IMAGES — UNCHANGED */
+/* DEFAULT IMAGE SIZE (PROJECTS ETC.) */
 .section-grid img{
   width:100%;
   height:240px;
@@ -182,48 +158,14 @@ section:nth-of-type(even) .section-grid > div:first-child{
   background:#f8fafc;
 }
 
-/* PROFESSIONAL EXPERIENCE IMAGE — ONLY THIS CHANGES */
 /* =========================
-   PROFESSIONAL EXPERIENCE — IMAGE FIX
+   PROFESSIONAL EXPERIENCE IMAGE FIX
    ========================= */
-/* =========================
-   PROFESSIONAL EXPERIENCE — REAL SIZE FIX
-   ========================= */
-
-.section-grid.prof-exp{
-  align-items:flex-start;   /* allow tall content */
-}
-
-.section-grid.prof-exp .exp-image{
-  width:480px;              /* increase width */
-  min-height:520px;         /* FORCE HEIGHT */
-  display:flex;
-  align-items:flex-start;
-}
-
-.section-grid.prof-exp .exp-image img{
-  width:100%;
-  height:100%;
+.section-grid.prof-exp img{
+  height:520px;          /* ✅ ONLY THIS IS DIFFERENT */
   object-fit:contain;
-  border:2px solid #111;
-  background:#fff;
-  padding:8px;
-}
-
-/* =========================
-   EDUCATION
-   ========================= */
-.edu-head{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  white-space:nowrap;
-}
-
-.edu-head img{
-  width:44px;
-  height:44px;
-  object-fit:contain;
+  background:#ffffff;
+  border:1px solid #94a3b8;
 }
 
 /* =========================
@@ -233,14 +175,11 @@ section:nth-of-type(even) .section-grid > div:first-child{
   display:inline-block;
   margin-top:14px;
   margin-right:18px;
-  font-size:16px;
   color:#4338ca;
   text-decoration:none;
 }
 
-.links a:hover{
-  text-decoration:underline;
-}
+.links a:hover{ text-decoration:underline; }
 
 /* =========================
    ACHIEVEMENTS
@@ -249,11 +188,9 @@ section:nth-of-type(even) .section-grid > div:first-child{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:24px;
-  margin-top:30px;
 }
 
 .ach-imgs img{
-  width:100%;
   height:220px;
   object-fit:cover;
   border:1px solid #cbd5e1;
@@ -264,8 +201,7 @@ section:nth-of-type(even) .section-grid > div:first-child{
    ========================= */
 .contact{
   text-align:center;
-  margin:70px 0 40px;
-  font-size:18px;
+  margin:70px 0;
 }
 
 .contact a{
@@ -287,13 +223,9 @@ section:nth-of-type(even) .section-grid > div:first-child{
     grid-template-columns:1fr;
   }
 
-  .intro .photo img{
-    width:260px;
-    max-height:420px;
-  }
-
-  p{
-    max-width:100%;
+  .section-grid img,
+  .section-grid.prof-exp img{
+    height:auto;
   }
 }
 </style>
@@ -314,8 +246,6 @@ section:nth-of-type(even) .section-grid > div:first-child{
     <div>Contact</div>
   </div>
 </div>
-
-
 
 <div class="page">
 <!-- ABOUT -->
@@ -393,7 +323,7 @@ section:nth-of-type(even) .section-grid > div:first-child{
 <section>
 <h2>Professional Experience</h2>
 
-<div class="section-grid">
+<div class="section-grid prof-exp">
 <div>
 <h3>IIT Hyderabad – Summer Research Intern (SURE)</h3>
 <p><i>June – July 2025</i></p>
@@ -407,12 +337,11 @@ section:nth-of-type(even) .section-grid > div:first-child{
 <div class="links">
 <a href="assets/LMS_OPTIMIZED_ADAPTIVE_10_TAP_FILTER___RIDDHIMA_SEN.pdf">Research Report (PDF)</a>
 </div>
-<div class="exp-image">
-    <img src="images/iith_photo.png">
-  </div>
+</div>
+<img src="images/iith_photo.png">
 </div>
 
-<div class="section-grid">
+<div class="section-grid prof-exp">
 <div>
 <h3>Startup – Electronics R&D Team Member</h3>
 <p><i>August 2025 – Present</i></p>
