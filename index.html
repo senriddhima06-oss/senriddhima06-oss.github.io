@@ -186,29 +186,30 @@ section:nth-of-type(even) .section-grid > div:first-child{
 /* =========================
    PROFESSIONAL EXPERIENCE — IMAGE FIX
    ========================= */
+/* =========================
+   PROFESSIONAL EXPERIENCE — REAL SIZE FIX
+   ========================= */
 
-.prof-exp{
+.section-grid.prof-exp{
+  align-items:flex-start;   /* allow tall content */
+}
+
+.section-grid.prof-exp .exp-image{
+  width:480px;              /* increase width */
+  min-height:520px;         /* FORCE HEIGHT */
   display:flex;
   align-items:flex-start;
-  gap:60px;
 }
 
-/* Image container */
-.prof-exp .exp-image{
-  width:440px;          /* INCREASED SIZE */
-  max-width:440px;
-  flex-shrink:0;
-}
-
-/* Image itself */
-.prof-exp .exp-image img{
+.section-grid.prof-exp .exp-image img{
   width:100%;
-  height:auto;
+  height:100%;
   object-fit:contain;
   border:2px solid #111;
-  padding:6px;
-  background:#ffffff;
+  background:#fff;
+  padding:8px;
 }
+
 /* =========================
    EDUCATION
    ========================= */
