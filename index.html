@@ -19,7 +19,7 @@ body{
    ========================= */
 .top-strip{
   width:100%;
-  background:#0f172a; /* DARK BLUE */
+  background:#0f172a;
 }
 
 .top-strip-inner{
@@ -36,70 +36,90 @@ body{
   letter-spacing:1px;
   font-weight:bold;
   color:#ffffff;
-  text-transform:uppercase;
   border-right:1px solid rgba(255,255,255,0.25);
 }
 
-.top-strip div:last-child{border-right:none}
+.top-strip div:last-child{
+  border-right:none;
+}
 
-/* ========================= */
-
+/* =========================
+   PAGE CONTAINER
+   ========================= */
 .page{
   max-width:980px;
   margin:70px auto;
   padding:0 26px;
 }
 
-/* SECTION BACKGROUNDS */
+/* =========================
+   SECTION BACKGROUNDS
+   ========================= */
 section:nth-of-type(odd){background:#f4f6f8}
 section:nth-of-type(even){background:#e6e9ee}
 
 section{
-  padding:45px 40px;
+  padding:48px 42px;
 }
 
-/* HEADINGS — NOT BOLD */
+/* =========================
+   HEADINGS — UNIFIED STYLE
+   ========================= */
 h1{
   font-size:44px;
   font-weight:normal;
-  margin-bottom:30px
+  letter-spacing:0.4px;
+  margin-bottom:26px;
 }
 
 h2{
-  font-size:32px;
+  font-size:40px;
   font-weight:normal;
-  margin:30px 0 26px;
-  text-transform:uppercase;
-}
-
-h2::after{
-  content:"";
-  display:block;
-  width:60px;
-  height:2px;
-  background:#6366f1;
-  margin-top:10px;
+  letter-spacing:0.35px;
+  margin:0 0 34px;
 }
 
 h3{
   font-size:26px;
   font-weight:normal;
-  margin:0;
+  letter-spacing:0.25px;
+  margin:0 0 10px;
 }
 
-/* TEXT */
-p{font-size:18px;max-width:68ch;margin:0}
-ul{font-size:17.5px;padding-left:20px;margin-top:12px}
-li{margin-bottom:10px}
+/* =========================
+   TEXT
+   ========================= */
+p{
+  font-size:18px;
+  max-width:65ch;
+  margin:0;
+  text-align:justify;
+  text-justify:inter-word;
+}
+
+ul{
+  font-size:17.5px;
+  padding-left:20px;
+  margin-top:12px;
+}
+
+li{
+  margin-bottom:10px;
+}
 
 /* =========================
-   INTRO
+   INTRO / ABOUT
    ========================= */
 .intro{
   display:grid;
   grid-template-columns:1fr 1.3fr;
   gap:60px;
-  align-items:center;
+  align-items:flex-start;
+}
+
+.photo{
+  display:flex;
+  justify-content:center;
 }
 
 .photo img{
@@ -145,7 +165,6 @@ section:nth-of-type(even) .section-grid > div:first-child{
   border-left-color:#0ea5e9;
 }
 
-/* DEFAULT IMAGE (CROPPED) */
 .section-grid img{
   width:100%;
   height:240px;
@@ -187,7 +206,9 @@ section:nth-of-type(even) .section-grid > div:first-child{
   text-decoration:none;
 }
 
-.links a:hover{text-decoration:underline}
+.links a:hover{
+  text-decoration:underline;
+}
 
 /* =========================
    ACHIEVEMENTS
@@ -231,7 +252,7 @@ section:nth-of-type(even) .section-grid > div:first-child{
   .interest-grid,
   .ach-imgs,
   .top-strip-inner{
-    grid-template-columns:1fr
+    grid-template-columns:1fr;
   }
 
   .photo img{
@@ -239,7 +260,9 @@ section:nth-of-type(even) .section-grid > div:first-child{
     height:260px;
   }
 
-  p{max-width:100%}
+  p{
+    max-width:100%;
+  }
 }
 </style>
 </head>
@@ -260,6 +283,7 @@ section:nth-of-type(even) .section-grid > div:first-child{
   </div>
 </div>
 
+
 <div class="page">
 <!-- ABOUT -->
 <section class="intro">
@@ -269,13 +293,27 @@ section:nth-of-type(even) .section-grid > div:first-child{
   <div>
     <h1>Riddhima Sen</h1>
     <p>
-      Hello, I am an engineer who enjoys working at the boundary between ideas and realization.
-      I am drawn to problems that demand rigorous thinking, systematic experimentation, and iterative refinement.
-      My interests lie in understanding systems deeply both, theoretically and practically, and translating
-      that understanding into efficient, reliable hardware and algorithms. I value precision, structure,
-      and purpose in engineering, and I am motivated by challenges that require crossing disciplinary boundaries
-      between signal processing, hardware design, and emerging technologies.
-    </p>
+  Hello, I am continuously learning and refining my skills, driven by curiosity and a desire to build meaningful 
+  solutions. My vision is to build systems that are intelligent, efficient and align technology with societal impact.
+</p>
+
+<p style="margin-top:14px">
+  My strength lies in clarity of fundamentals, connecting deep theory with disciplined execution, optimization, 
+  thereby enabling ideas to move from theory to implementation. My work spans digital design, embedded platforms, 
+  power electronics and system-level optimization.
+</p>
+
+<p style="margin-top:14px">
+  I thrive in multitasking environments, balancing academics with extra studies and choosing complex projects that 
+  demand focus and adaptability. My academic path has trained me to design, research and experiment — from logic 
+  gates to architecture, from power flow to control, from data to decisions.
+</p>
+
+<p style="margin-top:14px">
+  I believe engineering carries a social responsibility: to design not just what works today, but what remains 
+  reliable tomorrow.
+</p>
+
   </div>
 </section>
 
